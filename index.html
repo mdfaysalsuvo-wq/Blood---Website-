@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>রক্তসেতু — ৬৪ জেলা রক্তদাতা নেটওয়ার্ক</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red-900:#5C0E1F; --red-700:#8C1128; --red-600:#B01530; --red-500:#C81E3A; --red-400:#DC4A5F;
+  --gold-500:#E8A33D; --gold-600:#C97F1E;
+  --ink-900:#1B1418; --paper-0:#FBF6F1; --paper-100:#F3E9E0; --line:#E3D3C4;
+  --card-bg:#FFFFFF; --shadow:0 6px 20px rgba(92,14,31,0.08);
+  --bg:var(--paper-0); --fg:var(--ink-900); --muted:#7A6A63; --card:var(--card-bg); --input-bg:#ffffff;
+  --header-grad: linear-gradient(120deg, var(--red-700), var(--red-500) 60%, var(--gold-600));
+}
+[data-theme="dark"]{
+  --bg:#150F11; --fg:#F3E9E0; --muted:#B9A79C; --card:#211519; --line:#3A2429; --input-bg:#2A1B20;
+  --paper-100:#241619; --shadow:0 6px 24px rgba(0,0,0,0.45);
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{font-family:'Hind Siliguri',sans-serif;background:var(--bg);color:var(--fg);transition:background .25s,color .25s;min-height:100vh;padding-bottom:60px;}
+a{color:inherit;}
+.topbar{background:var(--header-grad);color:#fff;padding:16px 16px 56px;position:relative;overflow:hidden;}
+.topbar::after{content:"";position:absolute;right:-40px;top:-60px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.08);}
+.topbar::before{content:"";position:absolute;left:-30px;bottom:-70px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.06);}
+.topbar-inner{max-width:1150px;margin:0 auto;position:relative;z-index:2;}
+.brand-row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:10px;}
+.drop{width:36px;height:36px;flex:none;filter:drop-shadow(0 2px 4px rgba(0,0,0,.25));}
+.brand h1{font-size:21px;margin:0;font-weight:700;}
+.brand p{margin:0;font-size:12px;opacity:.85;}
+.top-actions{display:flex;gap:8px;flex-wrap:wrap;}
+.theme-btn{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:999px;padding:8px 13px;font-size:12.5px;cursor:pointer;display:flex;align-items:center;gap:6px;font-family:inherit;}
+.theme-btn:hover{background:rgba(255,255,255,.28);}
+.tabs{max-width:1150px;margin:14px auto 0;display:flex;gap:8px;padding:0 16px;position:relative;z-index:2;}
+.tab-btn{flex:1;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:12px;padding:10px;font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;}
+.tab-btn.active{background:#fff;color:var(--red-600);}
+.dash{max-width:1150px;margin:12px auto 0;padding:0 16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;position:relative;z-index:2;}
+.dash-card{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:12px;padding:10px 12px;}
+.dash-card .num{font-size:19px;font-weight:700;line-height:1;}
+.dash-card .lbl{font-size:11px;opacity:.85;margin-top:3px;}
+.wrap{max-width:1150px;margin:-30px auto 0;padding:0 16px;position:relative;z-index:3;}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:16px;margin-bottom:16px;}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;}
+@media(max-width:560px){.row2,.row3{grid-template-columns:1fr;}}
+label.mini{font-size:11.5px;color:var(--muted);display:block;margin-bottom:4px;font-weight:600;}
+input[type=text],input[type=email],input[type=tel],input[type=search],input[type=password],select,textarea{
+  width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--input-bg);color:var(--fg);font-family:inherit;font-size:14.5px;
+}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold-500);outline-offset:1px;}
+.bg-select{display:flex;flex-wrap:wrap;gap:6px;}
+.bg-chip{border:1.5px solid var(--line);background:var(--input-bg);padding:6px 12px;border-radius:999px;font-weight:700;font-size:13px;cursor:pointer;color:var(--fg);}
+.bg-chip.active{background:var(--red-500);border-color:var(--red-500);color:#fff;}
+.btn{border:none;border-radius:10px;padding:10px 16px;font-family:inherit;font-size:13.5px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:6px;}
+.btn-primary{background:var(--red-500);color:#fff;}
+.btn-primary:hover{background:var(--red-600);}
+.btn-gold{background:var(--gold-500);color:#3A2408;}
+.btn-ghost{background:transparent;border:1.5px solid var(--line);color:var(--fg);}
+.btn-ghost:hover{border-color:var(--red-400);}
+.btn-danger{background:#fff;color:var(--red-600);border:1.5px solid var(--red-400);}
+.btn-danger:hover{background:var(--red-500);color:#fff;}
+.btn-sm{padding:7px 10px;font-size:12px;border-radius:8px;}
+.btn-block{width:100%;justify-content:center;}
+.toolbar-row{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-top:12px;}
+.toolbar-row .left,.toolbar-row .right{display:flex;gap:8px;flex-wrap:wrap;}
+.result-count{font-size:13px;color:var(--muted);margin:6px 2px 12px;}
+.notice{background:var(--paper-100);border:1px dashed var(--line);border-radius:12px;padding:14px;font-size:13.5px;color:var(--muted);text-align:center;}
+.notice b{color:var(--fg);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:9px;position:relative;}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;}
+.name-block h3{margin:0;font-size:16.5px;}
+.name-block .loc{font-size:12px;color:var(--muted);margin-top:2px;}
+.badge{min-width:42px;text-align:center;padding:6px 9px;border-radius:10px;font-weight:800;font-size:13.5px;color:#fff;flex:none;}
+.info-row{font-size:13.5px;display:flex;gap:6px;align-items:center;}
+.info-row .muted{color:var(--muted);}
+.card-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px;}
+.icon-btn{flex:1 1 auto;border-radius:9px;border:none;padding:8px 6px;font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:5px;font-family:inherit;color:#fff;}
+.icon-btn.call{background:#2E7D32;}
+.icon-btn.sms{background:#1565C0;}
+.icon-btn.wa{background:#25D366;}
+.icon-btn.map{background:var(--gold-600);}
+.card-manage{display:flex;gap:6px;position:absolute;top:10px;right:10px;}
+.manage-btn{border:none;background:rgba(0,0,0,.06);width:27px;height:27px;border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:13px;color:var(--fg);}
+[data-theme="dark"] .manage-btn{background:rgba(255,255,255,.08);}
+.manage-btn:hover{background:var(--red-400);color:#fff;}
+.loadmore-wrap{text-align:center;margin-top:16px;}
+.modal-overlay{position:fixed;inset:0;background:rgba(20,10,12,.55);display:none;align-items:center;justify-content:center;z-index:50;padding:16px;}
+.modal-overlay.open{display:flex;}
+.modal{background:var(--card);border-radius:18px;max-width:460px;width:100%;padding:20px;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.35);position:relative;}
+.modal.wide{max-width:640px;}
+.modal h2{margin:0 0 14px;font-size:18.5px;}
+.field{margin-bottom:12px;}
+.field label{font-size:13px;font-weight:600;display:block;margin-bottom:5px;}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:16px;flex-wrap:wrap;}
+.close-x{position:absolute;top:14px;right:16px;background:none;border:none;font-size:20px;cursor:pointer;color:var(--muted);}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ink-900);color:#fff;padding:11px 18px;border-radius:10px;font-size:13px;box-shadow:0 8px 24px rgba(0,0,0,.3);z-index:100;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;max-width:90vw;text-align:center;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(-4px);}
+footer{text-align:center;font-size:12px;color:var(--muted);margin-top:26px;padding:0 16px;}
+.amb-national{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:10px;}
+.amb-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;box-shadow:var(--shadow);}
+.amb-card .nm{font-weight:700;font-size:14.5px;}
+.amb-card .num{font-size:20px;font-weight:800;color:var(--red-500);margin:4px 0;}
+.amb-card .sub{font-size:11.5px;color:var(--muted);margin-bottom:8px;}
+.amb-list .card{flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;}
+.tag{display:inline-block;padding:3px 9px;border-radius:999px;font-size:11px;font-weight:700;background:var(--paper-100);color:var(--red-600);}
+.admin-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:10px 0;}
+.admin-stats .box{background:var(--paper-100);border-radius:12px;padding:10px;text-align:center;}
+.admin-stats .box .n{font-size:18px;font-weight:800;color:var(--red-600);}
+.admin-stats .box .l{font-size:11px;color:var(--muted);}
+.progress-wrap{background:var(--paper-100);border-radius:999px;height:10px;overflow:hidden;margin:8px 0;}
+.progress-bar{background:var(--red-500);height:100%;width:0%;transition:width .2s;}
+.hidden{display:none !important;}
+.section-title{font-size:15px;font-weight:700;margin:4px 0 10px;}
+@media(max-width:520px){.brand h1{font-size:17px;}}
+.utbl{width:100%;border-collapse:collapse;font-size:12.5px;}
+.utbl th,.utbl td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap;}
+.utbl th{color:var(--muted);font-size:11.5px;}
+.on{color:#2E7D32;font-weight:700;}.off{color:var(--muted);}
+.tab-btn{padding:10px 4px;font-size:12.5px;line-height:1.25;}
+.prof{background:var(--paper-100);border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:12px;}
+.prof-top{display:flex;gap:10px;align-items:center;margin-bottom:8px;}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--red-500);color:#fff;font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center;flex:none;}
+.prof-hist{font-size:12px;color:var(--muted);margin-top:6px;}
+.bar-row{display:flex;align-items:center;gap:8px;margin:4px 0;font-size:12.5px;}
+.bar-l{width:34px;font-weight:700;}
+.bar-t{flex:1;background:var(--paper-100);border-radius:999px;height:10px;overflow:hidden;}
+.bar-f{height:100%;border-radius:999px;}
+.bar-n{width:64px;text-align:right;color:var(--muted);}
+.mrow{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;padding:9px 0;border-bottom:1px solid var(--line);}
+.mrow .nm{font-weight:700;font-size:14px;}.mrow .sb{font-size:12px;color:var(--muted);}
+.mrow .acts{display:flex;gap:6px;}
+.mrow .acts a{padding:7px 10px;border-radius:8px;color:#fff;font-size:12px;font-weight:700;text-decoration:none;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand-row">
+      <div class="brand">
+        <svg class="drop" viewBox="0 0 24 24"><path d="M12 2C12 2 5 11.5 5 15.5C5 19.6 8.4 23 12 23C15.6 23 19 19.6 19 15.5C19 11.5 12 2 12 2Z" fill="#fff" fill-opacity="0.95"/></svg>
+        <div>
+          <h1>রক্তসেতু</h1>
+          <p id="brandSub"></p>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button class="theme-btn" id="adminBtn">🔐 অ্যাডমিন</button>
+        <button class="theme-btn" id="themeToggle">🌙 <span id="themeLabel">ডার্ক মোড</span></button>
+      </div>
+    </div>
+    <div class="tabs">
+      <button class="tab-btn active" id="tabDonorsBtn">🩸 রক্তদাতা খুঁজুন</button>
+      <button class="tab-btn" id="tabAmbBtn">🚑 জরুরি অ্যাম্বুলেন্স</button>
+      <button class="tab-btn" id="tabReqBtn">🆘 রক্তের অনুরোধ</button>
+    </div>
+    <div class="dash" id="dashboard"></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ===== DONORS VIEW ===== -->
+  <div id="donorsView">
+    <div class="panel">
+      <div class="row3">
+        <div>
+          <label class="mini">বিভাগ</label>
+          <select id="divisionFilter"><option value="">সব বিভাগ</option></select>
+        </div>
+        <div>
+          <label class="mini">জেলা</label>
+          <select id="districtFilter"><option value="">সব জেলা</option></select>
+        </div>
+        <div>
+          <label class="mini">উপজেলা</label>
+          <select id="upazilaFilter"><option value="">সব উপজেলা</option></select>
+        </div>
+      </div>
+      <div style="margin-top:10px;">
+        <label class="mini">নাম / ফোন দিয়ে খুঁজুন (লোড হওয়া ডোনারদের মধ্যে)</label>
+        <input type="search" id="searchInput" placeholder="যেমন: রহিম, ০১৭...">
+      </div>
+      <label style="display:flex;gap:8px;align-items:center;margin-top:10px;font-size:13px;"><input type="checkbox" id="readyOnly"> শুধু এখন রক্ত দিতে প্রস্তুত ডোনার (শেষ দানের ৯০ দিন পার)</label>
+      <div style="margin-top:10px;">
+        <label class="mini">রক্তের গ্রুপ</label>
+        <div class="bg-select" id="bgSelect"></div>
+      </div>
+      <div class="toolbar-row">
+        <div class="left">
+          <button class="btn btn-primary btn-sm" id="quickReqBtn">🆘 রক্তের অনুরোধ পাঠান</button>
+          <button class="btn btn-ghost btn-sm" id="addDonorBtn">+ নতুন ডোনার যোগ করুন</button>
+          <button class="btn btn-ghost btn-sm" id="nearbyBtn">📍 কাছেরটা আগে</button>
+          <button class="btn btn-gold btn-sm hidden" id="loadDistrictBtn">⬇️ এই জেলার সব উপজেলা লোড করুন</button>
+        </div>
+        <div class="right">
+          <button class="btn btn-ghost btn-sm" id="exportBtn">⬇️ এক্সপোর্ট</button>
+          <button class="btn btn-ghost btn-sm" id="importBtn">⬆️ ইম্পোর্ট</button>
+          <input type="file" id="importFile" accept="application/json" style="display:none;">
+          <button class="btn btn-danger btn-sm" id="resetBtn">↺ রিসেট</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="result-count" id="resultCount"></div>
+    <div class="grid" id="donorGrid"></div>
+    <div class="notice hidden" id="emptyState">একটি <b>জেলা ও উপজেলা</b> নির্বাচন করুন, অথবা সার্চ করুন। কোনো উপজেলা নির্বাচন করলেই সেই উপজেলার ডোনার তালিকা স্বয়ংক্রিয়ভাবে লোড হয়ে যাবে।</div>
+    <div class="loadmore-wrap hidden" id="loadMoreWrap"><button class="btn btn-ghost" id="loadMoreBtn">আরও দেখুন</button></div>
+  </div>
+
+  <!-- ===== AMBULANCE VIEW ===== -->
+  <div id="ambView" class="hidden">
+    <div class="panel">
+      <div class="section-title">🚑 জাতীয় জরুরি সেবা (সরকারি, সারা দেশ)</div>
+      <div class="amb-national" id="nationalAmb"></div>
+    </div>
+    <div class="panel">
+      <div class="row2">
+        <div>
+          <label class="mini">জেলা অনুযায়ী ফিল্টার</label>
+          <select id="ambDistrictFilter"><option value="">সব জেলা</option></select>
+        </div>
+        <div>
+          <label class="mini">খুঁজুন</label>
+          <input type="search" id="ambSearchInput" placeholder="সেবার নাম, জেলা...">
+        </div>
+      </div>
+    </div>
+    <div class="result-count" id="ambResultCount"></div>
+    <div class="grid amb-list" id="ambGrid"></div>
+  </div>
+
+  <!-- ===== BLOOD REQUEST VIEW ===== -->
+  <div id="reqView" class="hidden">
+    <div class="panel">
+      <div class="section-title">🆘 রক্তের অনুরোধ</div>
+      <div style="font-size:13px;color:var(--muted);margin-bottom:10px;">রোগীর তথ্য দিয়ে অনুরোধ তৈরি করুন। এরপর একই গ্রুপের প্রস্তুত ডোনারদের এসএমএস/হোয়াটসঅ্যাপে সরাসরি জানাতে পারবেন।</div>
+      <button class="btn btn-primary btn-sm" id="newReqBtn">+ নতুন অনুরোধ পাঠান</button>
+    </div>
+    <div class="result-count" id="reqCount"></div>
+    <div class="grid" id="reqGrid"></div>
+  </div>
+
+  <footer>রক্তসেতু — সম্পূর্ণ ডেটা আপনার ব্রাউজারে (Local Storage) সংরক্ষিত থাকে। ডোনার তথ্য ডেমো/নমুনা উপাত্ত হিসেবে স্বয়ংক্রিয়ভাবে তৈরি — বাস্তব ব্যবহারের আগে যাচাই করে প্রকৃত ডোনার দিয়ে প্রতিস্থাপন করুন।</footer>
+</div>
+
+<!-- Add/Edit Donor Modal -->
+<div class="modal-overlay" id="donorModalOverlay">
+  <div class="modal">
+    <button class="close-x" id="closeModal">✕</button>
+    <h2 id="modalTitle">নতুন ডোনার যোগ করুন</h2>
+    <form id="donorForm">
+      <input type="hidden" id="donorId">
+      <div class="field"><label>পূর্ণ নাম *</label><input type="text" id="fName" required></div>
+      <div class="field"><label>রক্তের গ্রুপ *</label>
+        <select id="fBloodGroup" required>
+          <option value="A+">A+</option><option value="A-">A-</option>
+          <option value="B+">B+</option><option value="B-">B-</option>
+          <option value="AB+">AB+</option><option value="AB-">AB-</option>
+          <option value="O+">O+</option><option value="O-">O-</option>
+        </select>
+      </div>
+      <div class="field"><label>ফোন নম্বর *</label><input type="tel" id="fPhone" required placeholder="০১XXXXXXXXX"></div>
+      <div class="field"><label>জেলা *</label><select id="fDistrict" required></select></div>
+      <div class="field"><label>উপজেলা *</label><select id="fUpazila" required></select></div>
+      <div class="field"><label>বিস্তারিত ঠিকানা</label><textarea id="fAddress" rows="2" placeholder="বাড়ি/রোড/গ্রামের নাম"></textarea></div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost" id="cancelModal">বাতিল</button>
+        <button type="submit" class="btn btn-primary">সংরক্ষণ করুন</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Add/Edit Ambulance Modal -->
+<div class="modal-overlay" id="ambModalOverlay">
+  <div class="modal">
+    <button class="close-x" id="closeAmbModal">✕</button>
+    <h2 id="ambModalTitle">নতুন অ্যাম্বুলেন্স সেবা যোগ করুন</h2>
+    <form id="ambForm">
+      <input type="hidden" id="ambId">
+      <div class="field"><label>সেবার নাম *</label><input type="text" id="aName" required></div>
+      <div class="field"><label>ধরন</label>
+        <select id="aType">
+          <option value="সরকারি">সরকারি</option>
+          <option value="বেসরকারি">বেসরকারি</option>
+          <option value="এনজিও">এনজিও</option>
+        </select>
+      </div>
+      <div class="field"><label>জেলা *</label><select id="aDistrict" required></select></div>
+      <div class="field"><label>ফোন নম্বর *</label><input type="tel" id="aPhone" required></div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost" id="cancelAmbModal">বাতিল</button>
+        <button type="submit" class="btn btn-primary">সংরক্ষণ করুন</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Admin Login Modal -->
+<div class="modal-overlay" id="adminLoginOverlay">
+  <div class="modal">
+    <button class="close-x" id="closeAdminLogin">✕</button>
+    <h2>🔐 অ্যাডমিন লগইন</h2>
+    <form id="adminLoginForm">
+      <div class="field"><label>জিমেইল</label><input type="email" id="adminEmailInput" placeholder="example@gmail.com" required autocomplete="username"></div>
+      <div class="field"><label>পাসওয়ার্ড</label><input type="password" id="adminPassInput" required autocomplete="current-password"></div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost" id="cancelAdminLogin">বাতিল</button>
+        <button type="submit" class="btn btn-primary">লগইন</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Admin Panel Modal -->
+<div class="modal-overlay" id="adminPanelOverlay">
+  <div class="modal wide">
+    <button class="close-x" id="closeAdminPanel">✕</button>
+    <h2>🛠️ অ্যাডমিন প্যানেল</h2>
+    <div id="adminProfile"></div>
+    <div class="admin-stats" id="adminStats"></div>
+    <div class="section-title">🩸 রক্তের গ্রুপ অনুযায়ী ডোনার</div>
+    <div id="bgStats" style="margin-bottom:10px;"></div>
+    <div id="genProgressWrap" class="hidden">
+      <div class="progress-wrap"><div class="progress-bar" id="genProgressBar"></div></div>
+      <div style="font-size:12px;color:var(--muted);" id="genProgressLabel"></div>
+    </div>
+    <div class="toolbar-row">
+      <div class="left">
+        <button class="btn btn-gold btn-sm" id="genAllBtn">⚡ সব উপজেলার ডোনার জেনারেট করুন (সব উপজেলা)</button>
+        <button class="btn btn-ghost btn-sm" id="manageAmbBtn">🚑 অ্যাম্বুলেন্স তালিকা পরিচালনা</button>
+      </div>
+      <div class="right">
+        <button class="btn btn-danger btn-sm" id="wipeAllBtn">🗑️ পুরো ডাটাবেজ মুছুন</button>
+      </div>
+    </div>
+    <hr style="border-color:var(--line);margin:16px 0;">
+    <div class="section-title">👥 ইউজার ব্যবহারের সময়</div>
+    <div class="admin-stats" id="usageSummary"></div>
+    <div style="overflow-x:auto;"><table class="utbl"><thead><tr><th>ইউজার</th><th>ডিভাইস</th><th>ভিজিট</th><th>মোট সময়</th><th>সর্বশেষ সক্রিয়</th><th>অবস্থা</th></tr></thead><tbody id="usageBody"></tbody></table></div>
+    <div style="font-size:11.5px;color:var(--muted);margin-top:6px;">ℹ️ এই তথ্য শুধু এই ব্রাউজার/ডিভাইসে সংরক্ষিত হয়। সব ডিভাইসের ইউজার একসাথে দেখতে সার্ভার/ডাটাবেজ (যেমন Firebase) লাগবে।</div>
+    <button class="btn btn-ghost btn-sm" id="clearUsageBtn" style="margin-top:8px;">🧹 ব্যবহারের তথ্য মুছুন</button>
+    <hr style="border-color:var(--line);margin:16px 0;">
+    <div class="field">
+      <label>অ্যাডমিন জিমেইল ও পাসওয়ার্ড পরিবর্তন</label>
+      <input type="email" id="newAdminEmail" placeholder="নতুন জিমেইল (ঐচ্ছিক)" style="margin-bottom:8px;">
+      <div style="display:flex;gap:8px;">
+        <input type="password" id="newAdminPass" placeholder="নতুন পাসওয়ার্ড (ঐচ্ছিক)">
+        <button class="btn btn-ghost btn-sm" id="changeAdminPassBtn">পরিবর্তন</button>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" id="adminLogoutBtn">লগ-আউট</button>
+    </div>
+  </div>
+</div>
+
+<!-- Blood Request Modal -->
+<div class="modal-overlay" id="reqModalOverlay">
+  <div class="modal">
+    <button class="close-x" id="closeReqModal">✕</button>
+    <h2>🆘 রক্তের অনুরোধ পাঠান</h2>
+    <form id="reqForm">
+      <div class="field"><label>রোগীর নাম *</label><input type="text" id="rPatient" required></div>
+      <div class="row2">
+        <div class="field"><label>রক্তের গ্রুপ *</label>
+          <select id="rBlood" required><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></div>
+        <div class="field"><label>কত ব্যাগ দরকার *</label>
+          <select id="rBags"><option value="1">১ ব্যাগ</option><option value="2">২ ব্যাগ</option><option value="3">৩ ব্যাগ</option><option value="4">৪ ব্যাগ</option><option value="5">৫ ব্যাগ</option><option value="6">৬ ব্যাগ</option><option value="8">৮ ব্যাগ</option><option value="10">১০ ব্যাগ</option></select></div>
+      </div>
+      <div class="field"><label>কখন দরকার *</label>
+        <select id="rUrgency"><option value="now">এখনই জরুরি</option><option value="today">আজকের মধ্যে</option><option value="soon">২-৩ দিনের মধ্যে</option></select></div>
+      <div class="field"><label>হাসপাতালের নাম *</label><input type="text" id="rHospital" required></div>
+      <div class="row2">
+        <div class="field"><label>জেলা *</label><select id="rDistrict" required></select></div>
+        <div class="field"><label>উপজেলা *</label><select id="rUpazila" required></select></div>
+      </div>
+      <div class="field"><label>যোগাযোগের ফোন নম্বর *</label><input type="tel" id="rPhone" required placeholder="০১XXXXXXXXX"></div>
+      <div class="field"><label>অতিরিক্ত তথ্য</label><textarea id="rNote" rows="2" placeholder="রোগের ধরন, ওয়ার্ড/বেড নম্বর ইত্যাদি"></textarea></div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost" id="cancelReqModal">বাতিল</button>
+        <button type="submit" class="btn btn-primary">অনুরোধ পাঠান</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Notify Donors Modal -->
+<div class="modal-overlay" id="matchOverlay">
+  <div class="modal wide">
+    <button class="close-x" id="closeMatch">✕</button>
+    <h2>🔔 ডোনারদের জানান</h2>
+    <div class="field"><label>পাঠানোর বার্তা</label><textarea id="matchMsg" rows="6" readonly></textarea></div>
+    <div class="toolbar-row" style="margin-top:0;">
+      <div class="left">
+        <button class="btn btn-gold btn-sm" id="matchCopy">📋 কপি</button>
+        <a class="btn btn-ghost btn-sm" id="matchWa" target="_blank" rel="noopener" style="text-decoration:none;">🟢 হোয়াটসঅ্যাপে শেয়ার</a>
+        <button class="btn btn-ghost btn-sm hidden" id="matchShare">📤 শেয়ার</button>
+        <a class="btn btn-primary btn-sm" id="matchSmsAll" style="text-decoration:none;">✉️ প্রথম ১০ জনকে এসএমএস</a>
+      </div>
+    </div>
+    <div class="section-title" style="margin-top:14px;" id="matchTitle"></div>
+    <div id="matchList"></div>
+  </div>
+</div>
+
+<!-- Confirm Modal -->
+<div class="modal-overlay" id="confirmOverlay">
+  <div class="modal" style="max-width:340px;">
+    <h2 id="confirmTitle">নিশ্চিত করুন</h2>
+    <p id="confirmMsg"></p>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" id="confirmCancel">বাতিল</button>
+      <button class="btn btn-danger" id="confirmOk">নিশ্চিত</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============ STATIC DATA ============ */
+const BD_DATA = {"divisions":{"1":"চট্টগ্রাম","2":"রাজশাহী","3":"খুলনা","4":"বরিশাল","5":"সিলেট","6":"ঢাকা","7":"রংপুর","8":"ময়মনসিংহ"},"districts":[{"id":1,"div":1,"n":"Comilla","bn":"কুমিল্লা","lat":23.4682747,"lon":91.1788135,"u":["বরুড়া","ব্রাহ্মণপাড়া","বুড়িচং","চান্দিনা","চৌদ্দগ্রাম","দাউদকান্দি","দেবিদ্বার","হোমনা","লাকসাম","লালমাই","মুরাদনগর","নাঙ্গলকোট","কুমিল্লা আদর্শ সদর","মেঘনা","তিতাস","মনোহরগঞ্জ","কুমিল্লা সদর দক্ষিণ"]},{"id":2,"div":1,"n":"Feni","bn":"ফেনী","lat":23.023231,"lon":91.3840844,"u":["ছাগলনাইয়া","দাগনভূঞা","ফেনী সদর","পরশুরাম","সোনাগাজী","ফুলগাজী"]},{"id":3,"div":1,"n":"Brahmanbaria","bn":"ব্রাহ্মণবাড়িয়া","lat":23.9570904,"lon":91.1119286,"u":["আখাউড়া","বাঞ্ছারামপুর","ব্রাহ্মণবাড়িয়া সদর","কসবা","নবীনগর","নাসিরনগর","সরাইল","আশুগঞ্জ","বিজয়নগর"]},{"id":4,"div":1,"n":"Rangamati","bn":"রাঙ্গামাটি","lat":22.65561018,"lon":92.17541121,"u":["বাঘাইছড়ি","বরকল","কাউখালী","বিলাইছড়ি","কাপ্তাই","জুরাছড়ি","লংগদু","নানিয়ারচর","রাজস্থলী","রাঙ্গামাটি সদর"]},{"id":5,"div":1,"n":"Noakhali","bn":"নোয়াখালী","lat":22.869563,"lon":91.099398,"u":["বেগমগঞ্জ","নোয়াখালী সদর","চাটখিল","কোম্পানীগঞ্জ","হাতিয়া","সেনবাগ","সোনাইমুড়ী","সুবর্ণচর","কবিরহাট"]},{"id":6,"div":1,"n":"Chandpur","bn":"চাঁদপুর","lat":23.2332585,"lon":90.6712912,"u":["চাঁদপুর সদর","ফরিদগঞ্জ","হাইমচর","হাজীগঞ্জ","কচুয়া","মতলব দক্ষিণ","মতলব উত্তর","শাহরাস্তি","চন্দ্রগঞ্জ"]},{"id":7,"div":1,"n":"Lakshmipur","bn":"লক্ষ্মীপুর","lat":22.942477,"lon":90.841184,"u":["লক্ষ্মীপুর সদর","রায়পুর","রামগঞ্জ","রামগতি","কমলনগর"]},{"id":8,"div":1,"n":"Chattogram","bn":"চট্টগ্রাম","lat":22.335109,"lon":91.834073,"u":["আনোয়ারা","বাঁশখালী","বোয়ালখালী","চন্দনাইশ","ফটিকছড়ি","হাটহাজারী","কর্ণফুলী","লোহাগাড়া","মীরসরাই","পটিয়া","রাঙ্গুনিয়া","রাউজান","সন্দ্বীপ","সাতকানিয়া","সীতাকুণ্ড"]},{"id":9,"div":1,"n":"Coxsbazar","bn":"কক্সবাজার","lat":21.44315751,"lon":91.97381741,"u":["চকরিয়া","কক্সবাজার সদর","কুতুবদিয়া","মহেশখালী","রামু","টেকনাফ","উখিয়া","পেকুয়া","ঈদগাঁও","মাতামুহুরী"]},{"id":10,"div":1,"n":"Khagrachhari","bn":"খাগড়াছড়ি","lat":23.119285,"lon":91.984663,"u":["দীঘিনালা","খাগড়াছড়ি সদর","লক্ষ্মীছড়ি","মহালছড়ি","মানিকছড়ি","মাটিরাঙ্গা","পানছড়ি","রামগড়","গুইমারা"]},{"id":11,"div":1,"n":"Bandarban","bn":"বান্দরবান","lat":22.1953275,"lon":92.2183773,"u":["আলীকদম","বান্দরবান সদর","লামা","নাইক্ষ্যংছড়ি","রোয়াংছড়ি","রুমা","থানচি"]},{"id":12,"div":2,"n":"Sirajganj","bn":"সিরাজগঞ্জ","lat":24.4533978,"lon":89.7006815,"u":["বেলকুচি","চৌহালী","কামারখন্দ","কাজীপুর","রায়গঞ্জ","শাহজাদপুর","সিরাজগঞ্জ সদর","তাড়াশ","উল্লাপাড়া"]},{"id":13,"div":2,"n":"Pabna","bn":"পাবনা","lat":23.998524,"lon":89.233645,"u":["আটঘরিয়া","বেড়া","ভাঙ্গুড়া","চাটমোহর","ফরিদপুর","ঈশ্বরদী","পাবনা সদর","সাঁথিয়া","সুজানগর"]},{"id":14,"div":2,"n":"Bogura","bn":"বগুড়া","lat":24.8465228,"lon":89.377755,"u":["আদমদীঘি","বগুড়া সদর","ধুনট","দুপচাঁচিয়া","গাবতলী","কাহালু","নন্দীগ্রাম","সারিয়াকান্দি","শাজাহানপুর","শেরপুর","শিবগঞ্জ","সোনাতলা","মোকামতলা"]},{"id":15,"div":2,"n":"Rajshahi","bn":"রাজশাহী","lat":24.37230298,"lon":88.56307623,"u":["বাঘা","বাগমারা","চারঘাট","দুর্গাপুর","গোদাগাড়ী","মোহনপুর","পবা","পুঠিয়া","তানোর"]},{"id":16,"div":2,"n":"Natore","bn":"নাটোর","lat":24.420556,"lon":89.000282,"u":["বাগাতিপাড়া","বড়াইগ্রাম","গুরুদাসপুর","লালপুর","নলডাঙ্গা","নাটোর সদর","সিংড়া"]},{"id":17,"div":2,"n":"Joypurhat","bn":"জয়পুরহাট","lat":25.09636876,"lon":89.0400428,"u":["আক্কেলপুর","জয়পুরহাট সদর","কালাই","ক্ষেতলাল","পাঁচবিবি"]},{"id":18,"div":2,"n":"Chapainawabganj","bn":"চাঁপাইনবাবগঞ্জ","lat":24.5965034,"lon":88.2775122,"u":["ভোলাহাট","গোমস্তাপুর","নাচোল","চাঁপাইনবাবগঞ্জ সদর","শিবগঞ্জ"]},{"id":19,"div":2,"n":"Naogaon","bn":"নওগাঁ","lat":24.83256191,"lon":88.92485205,"u":["আত্রাই","বদলগাছী","ধামইরহাট","মান্দা","মহাদেবপুর","নওগাঁ সদর","নিয়ামতপুর","পত্নীতলা","পোরশা","রাণীনগর","সাপাহার"]},{"id":20,"div":3,"n":"Jashore","bn":"যশোর","lat":23.16643,"lon":89.2081126,"u":["অভয়নগর","বাঘারপাড়া","চৌগাছা","ঝিকরগাছা","কেশবপুর","যশোর সদর","মণিরামপুর","শার্শা"]},{"id":21,"div":3,"n":"Satkhira","bn":"সাতক্ষীরা","lat":22.7180905,"lon":89.0687033,"u":["আশাশুনি","দেবহাটা","কলারোয়া","কালীগঞ্জ","সাতক্ষীরা সদর","শ্যামনগর","তালা"]},{"id":22,"div":3,"n":"Meherpur","bn":"মেহেরপুর","lat":23.762213,"lon":88.631821,"u":["গাংনী","মেহেরপুর সদর","মুজিবনগর"]},{"id":23,"div":3,"n":"Narail","bn":"নড়াইল","lat":23.172534,"lon":89.512672,"u":["কালিয়া","লোহাগাড়া","নড়াইল সদর"]},{"id":24,"div":3,"n":"Chuadanga","bn":"চুয়াডাঙ্গা","lat":23.6401961,"lon":88.841841,"u":["আলমডাঙ্গা","চুয়াডাঙ্গা সদর","দামুড়হুদা","জীবননগর"]},{"id":25,"div":3,"n":"Kushtia","bn":"কুষ্টিয়া","lat":23.901258,"lon":89.120482,"u":["ভেড়ামারা","দৌলতপুর","খোকসা","কুমারখালী","কুষ্টিয়া সদর","মিরপুর"]},{"id":26,"div":3,"n":"Magura","bn":"মাগুরা","lat":23.487337,"lon":89.419956,"u":["মাগুরা সদর","মহম্মদপুর","শালিখা","শ্রীপুর"]},{"id":27,"div":3,"n":"Khulna","bn":"খুলনা","lat":22.815774,"lon":89.568679,"u":["বটিয়াঘাটা","দাকোপ","ডুমুরিয়া","দিঘলিয়া","কয়রা","পাইকগাছা","ফুলতলা","রূপসা","তেরখাদা"]},{"id":28,"div":3,"n":"Bagerhat","bn":"বাগেরহাট","lat":22.651568,"lon":89.785938,"u":["বাগেরহাট সদর","চিতলমারী","ফকিরহাট","কচুয়া","মোল্লাহাট","মোংলা","মোড়েলগঞ্জ","রামপাল","শরণখোলা"]},{"id":29,"div":3,"n":"Jhenaidah","bn":"ঝিনাইদহ","lat":23.5448176,"lon":89.1539213,"u":["হরিণাকুন্ডু","ঝিনাইদহ সদর","কালীগঞ্জ","কোটচাঁদপুর","মহেশপুর","শৈলকুপা"]},{"id":30,"div":4,"n":"Jhalakathi","bn":"ঝালকাঠি","lat":22.6422689,"lon":90.2003932,"u":["ঝালকাঠি সদর","কাঠালিয়া","নলছিটি","রাজাপুর"]},{"id":31,"div":4,"n":"Patuakhali","bn":"পটুয়াখালী","lat":22.3596316,"lon":90.3298712,"u":["বাউফল","দশমিনা","দুমকি","গলাচিপা","কলাপাড়া","মির্জাগঞ্জ","পটুয়াখালী সদর","রাঙ্গাবালী"]},{"id":32,"div":4,"n":"Pirojpur","bn":"পিরোজপুর","lat":22.5781398,"lon":89.9983909,"u":["ভান্ডারিয়া","ইন্দুরকানী","কাউখালী","মঠবাড়িয়া","নাজিরপুর","নেছারাবাদ","পিরোজপুর সদর"]},{"id":33,"div":4,"n":"Barisal","bn":"বরিশাল","lat":22.7004179,"lon":90.3731568,"u":["আগৈলঝাড়া","বাবুগঞ্জ","বাকেরগঞ্জ","বানারীপাড়া","বরিশাল সদর","গৌরনদী","হিজলা","মেহেন্দিগঞ্জ","মুলাদী","উজিরপুর"]},{"id":34,"div":4,"n":"Bhola","bn":"ভোলা","lat":22.685923,"lon":90.648179,"u":["ভোলা সদর","বুরহানউদ্দিন","চরফ্যাশন","দৌলতখান","লালমোহন","মনপুরা","তজুমদ্দিন"]},{"id":35,"div":4,"n":"Barguna","bn":"বরগুনা","lat":22.159182,"lon":90.125581,"u":["আমতলী","বামনা","বরগুনা সদর","বেতাগী","পাথরঘাটা","তালতলী"]},{"id":36,"div":5,"n":"Sylhet","bn":"সিলেট","lat":24.8897956,"lon":91.8697894,"u":["বালাগঞ্জ","বিয়ানীবাজার","বিশ্বনাথ","কোম্পানীগঞ্জ","দক্ষিণ সুরমা","ফেঞ্চুগঞ্জ","গোলাপগঞ্জ","গোয়াইনঘাট","জৈন্তাপুর","কানাইঘাট","ওসমানী নগর","সিলেট সদর","জকিগঞ্জ"]},{"id":37,"div":5,"n":"Moulvibazar","bn":"মৌলভীবাজার","lat":24.482934,"lon":91.777417,"u":["বড়লেখা","জুড়ী","কমলগঞ্জ","কুলাউড়া","মৌলভীবাজার সদর","রাজনগর","শ্রীমঙ্গল"]},{"id":38,"div":5,"n":"Habiganj","bn":"হবিগঞ্জ","lat":24.374945,"lon":91.41553,"u":["আজমিরীগঞ্জ","বাহুবল","বানিয়াচং","চুনারুঘাট","হবিগঞ্জ সদর","লাখাই","মাধবপুর","নবীগঞ্জ","শায়েস্তাগঞ্জ"]},{"id":39,"div":5,"n":"Sunamganj","bn":"সুনামগঞ্জ","lat":25.0658042,"lon":91.3950115,"u":["বিশ্বম্ভরপুর","ছাতক","শান্তিগঞ্জ","দিরাই","ধর্মপাশা","দোয়ারাবাজার","জগন্নাথপুর","জামালগঞ্জ","শাল্লা","সুনামগঞ্জ সদর","তাহিরপুর","মধ্যনগর"]},{"id":40,"div":6,"n":"Narsingdi","bn":"নরসিংদী","lat":23.932233,"lon":90.71541,"u":["নরসিংদী সদর","বেলাবো","মনোহরদী","পলাশ","রায়পুরা","শিবপুর"]},{"id":41,"div":6,"n":"Gazipur","bn":"গাজীপুর","lat":24.0022858,"lon":90.4264283,"u":["গাজীপুর সদর","কালিয়াকৈর","কালীগঞ্জ","কাপাসিয়া","শ্রীপুর"]},{"id":42,"div":6,"n":"Shariatpur","bn":"শরীয়তপুর","lat":23.2060195,"lon":90.3477725,"u":["ভেদরগঞ্জ","ডামুড্যা","গোসাইরহাট","নড়িয়া","শরীয়তপুর সদর","জাজিরা"]},{"id":43,"div":6,"n":"Narayanganj","bn":"নারায়ণগঞ্জ","lat":23.63366,"lon":90.496482,"u":["আড়াইহাজার","বন্দর","নারায়ণগঞ্জ সদর","রূপগঞ্জ","সোনারগাঁ"]},{"id":44,"div":6,"n":"Tangail","bn":"টাঙ্গাইল","lat":24.264145,"lon":89.918029,"u":["গোপালপুর","বাসাইল","ভূঞাপুর","দেলদুয়ার","ঘাটাইল","কালিহাতী","মধুপুর","মির্জাপুর","নাগরপুর","সখিপুর","ধনবাড়ী","টাঙ্গাইল সদর"]},{"id":45,"div":6,"n":"Kishoreganj","bn":"কিশোরগঞ্জ","lat":24.444937,"lon":90.776575,"u":["অষ্টগ্রাম","বাজিতপুর","ভৈরব","হোসেনপুর","ইটনা","করিমগঞ্জ","কটিয়াদী","কিশোরগঞ্জ সদর","কুলিয়ারচর","মিঠামইন","নিকলী","পাকুন্দিয়া","তাড়াইল"]},{"id":46,"div":6,"n":"Manikganj","bn":"মানিকগঞ্জ","lat":23.8602262,"lon":90.0018293,"u":["দৌলতপুর","ঘিওর","হরিরামপুর","মানিকগঞ্জ সদর","সাটুরিয়া","শিবালয়","সিংগাইর"]},{"id":47,"div":6,"n":"Dhaka","bn":"ঢাকা","lat":23.7115253,"lon":90.4111451,"u":["ধামরাই","দোহার","কেরানীগঞ্জ","নবাবগঞ্জ","সাভার"]},{"id":48,"div":6,"n":"Munshiganj","bn":"মুন্সিগঞ্জ","lat":23.5435742,"lon":90.5354327,"u":["গজারিয়া","লৌহজং","মুন্সিগঞ্জ সদর","সিরাজদিখান","শ্রীনগর","টংগিবাড়ী"]},{"id":49,"div":6,"n":"Rajbari","bn":"রাজবাড়ী","lat":23.7574305,"lon":89.6444665,"u":["বালিয়াকান্দি","গোয়ালন্দ","পাংশা","রাজবাড়ী সদর","কালুখালী"]},{"id":50,"div":6,"n":"Madaripur","bn":"মাদারীপুর","lat":23.164102,"lon":90.1896805,"u":["রাজৈর","মাদারীপুর সদর","কালকিনি","শিবচর","ডাসার"]},{"id":51,"div":6,"n":"Gopalganj","bn":"গোপালগঞ্জ","lat":23.0050857,"lon":89.8266059,"u":["গোপালগঞ্জ সদর","কাশিয়ানী","কোটালীপাড়া","মুকসুদপুর","টুঙ্গিপাড়া"]},{"id":52,"div":6,"n":"Faridpur","bn":"ফরিদপুর","lat":23.6070822,"lon":89.8429406,"u":["আলফাডাঙ্গা","ভাঙ্গা","বোয়ালমারী","চরভদ্রাসন","ফরিদপুর সদর","মধুখালী","নগরকান্দা","সদরপুর","সালথা"]},{"id":53,"div":7,"n":"Panchagarh","bn":"পঞ্চগড়","lat":26.3411,"lon":88.5541606,"u":["আটোয়ারী","বোদা","দেবীগঞ্জ","পঞ্চগড় সদর","তেঁতুলিয়া"]},{"id":54,"div":7,"n":"Dinajpur","bn":"দিনাজপুর","lat":25.6217061,"lon":88.6354504,"u":["বিরল","বিরামপুর","বীরগঞ্জ","বোচাগঞ্জ","চিরিরবন্দর","দিনাজপুর সদর","ঘোড়াঘাট","হাকিমপুর","কাহারোল","খানসামা","নবাবগঞ্জ","পার্বতীপুর","ফুলবাড়ী"]},{"id":55,"div":7,"n":"Lalmonirhat","bn":"লালমনিরহাট","lat":25.9165451,"lon":89.4532409,"u":["আদিতমারী","হাতীবান্ধা","কালীগঞ্জ","লালমনিরহাট সদর","পাটগ্রাম"]},{"id":56,"div":7,"n":"Nilphamari","bn":"নীলফামারী","lat":25.931794,"lon":88.856006,"u":["ডিমলা","ডোমার","জলঢাকা","কিশোরগঞ্জ","নীলফামারী সদর","সৈয়দপুর"]},{"id":57,"div":7,"n":"Gaibandha","bn":"গাইবান্ধা","lat":25.328751,"lon":89.528088,"u":["গাইবান্ধা সদর","গোবিন্দগঞ্জ","পলাশবাড়ী","ফুলছড়ি","সাদুল্লাপুর","সাঘাটা","সুন্দরগঞ্জ"]},{"id":58,"div":7,"n":"Thakurgaon","bn":"ঠাকুরগাঁও","lat":26.0336945,"lon":88.4616834,"u":["বালিয়াডাঙ্গী","হরিপুর","পীরগঞ্জ","রাণীশংকৈল","ঠাকুরগাঁও সদর","রুহিয়া","ভুল্লী"]},{"id":59,"div":7,"n":"Rangpur","bn":"রংপুর","lat":25.7558096,"lon":89.244462,"u":["বদরগঞ্জ","গংগাচড়া","কাউনিয়া","মিঠাপুকুর","পীরগাছা","পীরগঞ্জ","রংপুর সদর","তারাগঞ্জ"]},{"id":60,"div":7,"n":"Kurigram","bn":"কুড়িগ্রাম","lat":25.805445,"lon":89.636174,"u":["ভুরুঙ্গামারী","চর রাজিবপুর","চিলমারী","কুড়িগ্রাম সদর","নাগেশ্বরী","ফুলবাড়ী","রাজারহাট","রৌমারী","উলিপুর"]},{"id":61,"div":8,"n":"Sherpur","bn":"শেরপুর","lat":25.0204933,"lon":90.0152966,"u":["ঝিনাইগাতী","নকলা","নালিতাবাড়ী","শেরপুর সদর","শ্রীবরদী"]},{"id":62,"div":8,"n":"Mymensingh","bn":"ময়মনসিংহ","lat":24.746567,"lon":90.4072093,"u":["ভালুকা","ধোবাউড়া","ফুলবাড়ীয়া","গফরগাঁও","গৌরীপুর","হালুয়াঘাট","ঈশ্বরগঞ্জ","মুক্তাগাছা","ময়মনসিংহ সদর","নান্দাইল","ফুলপুর","তারাকান্দা","ত্রিশাল"]},{"id":63,"div":8,"n":"Jamalpur","bn":"জামালপুর","lat":24.937533,"lon":89.937775,"u":["বকশীগঞ্জ","দেওয়ানগঞ্জ","ইসলামপুর","জামালপুর সদর","মাদারগঞ্জ","মেলান্দহ","সরিষাবাড়ী"]},{"id":64,"div":8,"n":"Netrokona","bn":"নেত্রকোণা","lat":24.870955,"lon":90.727887,"u":["আটপাড়া","বারহাট্টা","দুর্গাপুর","কলমাকান্দা","খালিয়াজুরী","কেন্দুয়া","মদন","মোহনগঞ্জ","নেত্রকোণা সদর","পূর্বধলা"]}]};
+const BLOOD_GROUPS = ['A+','A-','B+','B-','AB+','AB-','O+','O-'];
+const BG_BN={'A+':'A+','A-':'A-','B+':'B+','B-':'B-','AB+':'AB+','AB-':'AB-','O+':'O+','O-':'O-'};
+const BD_DIG='০১২৩৪৫৬৭৮৯';
+function bn(n){return String(n).replace(/\d/g,d=>BD_DIG[d]);}
+function toEn(t){return String(t).replace(/[০-৯]/g,d=>BD_DIG.indexOf(d));}
+function fmtDur(s){s=Math.round(s);const h=Math.floor(s/3600),m=Math.floor(s%3600/60),x=s%60,o=[];if(h)o.push(bn(h)+' ঘণ্টা');if(m)o.push(bn(m)+' মিনিট');if(x||!o.length)o.push(bn(x)+' সেকেন্ড');return o.join(' ');}
+const BG_COLORS = {'A+':'#C81E3A','A-':'#8C1128','B+':'#1565C0','B-':'#0D47A1','AB+':'#7B1FA2','AB-':'#4A148C','O+':'#2E7D32','O-':'#1B5E20'};
+const NATIONAL_AMB = [
+  {name:'ন্যাশনাল ইমার্জেন্সি সার্ভিস (পুলিশ/ফায়ার/অ্যাম্বুলেন্স)', phone:'999', sub:'টোল ফ্রি, সারা দেশ, ২৪ ঘণ্টা'},
+  {name:'অ্যাম্বুলেন্স সেবা হটলাইন', phone:'16263', sub:'স্বাস্থ্য অধিদপ্তর, সারা দেশ'},
+  {name:'ফায়ার সার্ভিস ও সিভিল ডিফেন্স', phone:'102', sub:'অগ্নিকাণ্ড ও উদ্ধার সেবা'},
+  {name:'ঢাকা মেট্রোপলিটন পুলিশ', phone:'100', sub:'জরুরি পুলিশি সহায়তা'}
+];
+const FIRST_M = ['রহিম','করিম','সাকিব','তানভীর','ফাহাদ','আরিফ','রাসেল','মাহমুদ','ইমরান','সোহেল','জাহিদ','নাসির','শাকিল','রফিক','হাসান','হৃদয়','আসিফ','তারেক','শামীম','মামুন','জসিম','রুবেল','আলামিন','সজীব','রাজু','মিলন','সাইফুল','জাকির','বাবু','সুমন','নাঈম','ফয়সাল','মিজান','রনি','শাহীন','কামরুল','দেলোয়ার','আনিস','মুন্না','তৌহিদ'];
+const FIRST_F = ['ফারজানা','নাসরিন','সুমাইয়া','তানিয়া','রুমা','সাথী','শিরিন','নাজমা','রোজিনা','মৌসুমী','তাসলিমা','ইয়াসমিন','সাবিনা','রিনা','লিমা','সাদিয়া','মিতু','পলি','শাহনাজ','রুবিনা'];
+const SURNAMES = ['ইসলাম','আহমেদ','হোসেন','রহমান','খান','চৌধুরী','তালুকদার','মোল্লা','সরকার','মিয়া','শেখ','আকন্দ','প্রামাণিক','বিশ্বাস','মন্ডল','ভূঁইয়া'];
+const AMB_NAME_PARTS = ['সেবা','হেল্পলাইন','রেসকিউ','কল্যাণ সমিতি','ফাউন্ডেশন'];
+
+/* ============ SEEDED RANDOM ============ */
+function hashStr(s){let h=1779033703^s.length;for(let i=0;i<s.length;i++){h=Math.imul(h^s.charCodeAt(i),3432918353);h=h<<13|h>>>19;}return function(){h=Math.imul(h^h>>>16,2246822507);h=Math.imul(h^h>>>13,3266489909);h^=h>>>16;return h>>>0;}}
+function mulberry32(seed){return function(){seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;}}
+function makeRng(key){const seedFn=hashStr(key);return mulberry32(seedFn());}
+function pick(rng,arr){return arr[Math.floor(rng()*arr.length)];}
+function randIntR(rng,a,b){return Math.floor(rng()*(b-a+1))+a;}
+function randPhone(rng){const mid=['3','4','5','6','7','8','9'];let n='01'+pick(rng,mid);for(let i=0;i<8;i++)n+=randIntR(rng,0,9);return n;}
+function jitter(rng,v){return v+(rng()-0.5)*0.08;}
+
+/* ============ HELPERS: district/upazila lookup ============ */
+function getDistrict(id){return BD_DATA.districts.find(d=>d.id==id);}
+function allUpazilas(d){return d.u;}
+
+/* ============ STORAGE ============ */
+const K_DONORS='rs_donors_v4', K_GEN='rs_gen_v4', K_AMB='rs_amb_v4', K_ADMIN='rs_admin_cred_v2', K_USAGE='rs_usage_v1', K_UID='rs_uid';
+const PER_GROUP=12; // প্রতি রক্তগ্রুপে ১২ জন => প্রতি উপজেলায় ৯৬ জন
+const TOTAL_UPZ=BD_DATA.districts.reduce((t,d)=>t+d.u.length,0);
+let donors=[]; let generatedSet=new Set(); let ambulances=[]; let deletedIds=new Set();
+function ls(k,def){try{const v=localStorage.getItem(k);return v?JSON.parse(v):def;}catch(e){return def;}}
+function splitKey(k){const i=k.indexOf('::');return [k.slice(0,i),k.slice(i+2)];}
+
+function loadAll(){
+  const saved=ls(K_DONORS,null), gen=ls(K_GEN,null);
+  ambulances=ls(K_AMB,[]);
+  if(saved===null||gen===null){
+    seedStarterData();
+  }else{
+    deletedIds=new Set(saved.deleted||[]);
+    generatedSet=new Set(); donors=[];
+    gen.forEach(k=>{const [a,b]=splitKey(k);ensureUpazilaDonors(Number(a),b);});
+    const over=new Map((saved.custom||[]).map(x=>[x.id,x]));
+    donors=donors.filter(x=>!deletedIds.has(x.id)).map(x=>over.has(x.id)?over.get(x.id):x);
+    over.forEach(x=>{if(String(x.id).startsWith('c_')) donors.unshift(x);});
+  }
+  if(ambulances.length===0) seedAmbulances();
+}
+// শুধু নতুন/এডিট করা ডোনার ও ডিলিট তালিকা সেভ হয়; বাকি ডোনার প্রতিবার নিজে তৈরি হয় (স্টোরেজ বাঁচাতে)
+function saveDonors(){
+  try{
+    const custom=donors.filter(x=>String(x.id).startsWith('c_')||x.m);
+    localStorage.setItem(K_DONORS,JSON.stringify({custom,deleted:Array.from(deletedIds)}));
+  }catch(e){toast('⚠️ স্টোরেজ পূর্ণ, কিছু ডেটা সেভ নাও হতে পারে');}
+}
+function saveGen(){try{localStorage.setItem(K_GEN,JSON.stringify(Array.from(generatedSet)));}catch(e){}}
+function saveAmb(){try{localStorage.setItem(K_AMB,JSON.stringify(ambulances));}catch(e){}}
+
+/* ============ DONOR GENERATION (deterministic, per upazila) ============ */
+function genKey(districtId,upazila){return districtId+'::'+upazila;}
+function genList(districtId,upazila){
+  const d=getDistrict(districtId); if(!d) return [];
+  const key=genKey(districtId,upazila), rng=makeRng(key), out=[];
+  BLOOD_GROUPS.forEach(bg=>{
+    for(let i=0;i<PER_GROUP;i++){
+      const first=pick(rng,FIRST_M);
+      out.push({id:'d_'+key+'_'+bg+'_'+i,n:first+' '+pick(rng,SURNAMES),g:bg,p:randPhone(rng),did:d.id,u:upazila,a:'',t:jitter(rng,d.lat),o:jitter(rng,d.lon),ld:randIntR(rng,0,270)});
+    }
+  });
+  return out;
+}
+function ensureUpazilaDonors(districtId,upazila){
+  const key=genKey(districtId,upazila);
+  if(generatedSet.has(key)) return false;
+  const list=genList(districtId,upazila); if(!list.length) return false;
+  list.forEach(x=>donors.push(x)); generatedSet.add(key);
+  return true;
+}
+function ensureDistrictDonors(districtId){
+  const d=getDistrict(districtId); if(!d) return;
+  d.u.forEach(upz=>ensureUpazilaDonors(districtId,upz));
+  saveDonors(); saveGen();
+}
+function seedStarterData(){
+  deletedIds=new Set();
+  BD_DATA.districts.forEach(d=>d.u.forEach(u=>ensureUpazilaDonors(d.id,u)));
+  saveDonors(); saveGen();
+}
+function seedAmbulances(){
+  BD_DATA.districts.forEach(d=>{
+    const rng=makeRng('amb::'+d.id);
+    for(let i=0;i<2;i++){
+      const type=pick(rng,['সরকারি','বেসরকারি','এনজিও']);
+      ambulances.push({id:'amb_'+d.id+'_'+i,n:(d.bn+' '+(i===0?'সদর হাসপাতাল':'রেড ক্রিসেন্ট')+' অ্যাম্বুলেন্স'),t:type,did:d.id,p:randPhone(rng)});
+    }
+  });
+  saveAmb();
+}
+
+/* ============ THEME ============ */
+function initTheme(){
+  const saved=localStorage.getItem('rs_theme')||'light';
+  document.body.setAttribute('data-theme',saved==='dark'?'dark':'light');
+  updateThemeLabel();
+}
+function toggleTheme(){
+  const cur=document.body.getAttribute('data-theme');
+  const next=cur==='dark'?'light':'dark';
+  document.body.setAttribute('data-theme',next);
+  localStorage.setItem('rs_theme',next);
+  updateThemeLabel();
+}
+function updateThemeLabel(){
+  const dark=document.body.getAttribute('data-theme')==='dark';
+  document.getElementById('themeLabel').textContent=dark?'লাইট মোড':'ডার্ক মোড';
+  document.getElementById('themeToggle').firstChild.textContent=dark?'☀️ ':'🌙 ';
+}
+
+/* ============ TABS ============ */
+function showTab(tab){
+  document.getElementById('donorsView').classList.toggle('hidden',tab!=='donors');
+  document.getElementById('ambView').classList.toggle('hidden',tab!=='amb');
+  document.getElementById('reqView').classList.toggle('hidden',tab!=='req');
+  document.getElementById('tabDonorsBtn').classList.toggle('active',tab==='donors');
+  document.getElementById('tabAmbBtn').classList.toggle('active',tab==='amb');
+  document.getElementById('tabReqBtn').classList.toggle('active',tab==='req');
+}
+document.getElementById('tabDonorsBtn').addEventListener('click',()=>showTab('donors'));
+document.getElementById('tabAmbBtn').addEventListener('click',()=>{showTab('amb');renderAmbList();});
+
+/* ============ DASHBOARD ============ */
+function renderDashboard(){
+  const dash=document.getElementById('dashboard');
+  const districtsCovered=new Set(donors.map(x=>x.did)).size;
+  let html=`<div class="dash-card"><div class="num">${bn(donors.length)}</div><div class="lbl">মোট ডোনার</div></div>`;
+  html+=`<div class="dash-card"><div class="num">${bn(districtsCovered)}/${bn(64)}</div><div class="lbl">জেলা কভার</div></div>`;
+  html+=`<div class="dash-card"><div class="num">${bn(generatedSet.size)}/${bn(TOTAL_UPZ)}</div><div class="lbl">উপজেলা লোড হয়েছে</div></div>`;
+  html+=`<div class="dash-card"><div class="num">${bn(ambulances.length)}</div><div class="lbl">অ্যাম্বুলেন্স সেবা</div></div>`;
+  dash.innerHTML=html;
+}
+
+/* ============ FILTER DROPDOWNS ============ */
+function fillDivisionSelect(sel){
+  sel.innerHTML='<option value="">সব বিভাগ</option>'+Object.entries(BD_DATA.divisions).map(([id,name])=>`<option value="${id}">${name}</option>`).join('');
+}
+function fillDistrictSelect(sel,divisionId){
+  const list=BD_DATA.districts.filter(d=>!divisionId||d.div==divisionId).sort((a,b)=>a.bn.localeCompare(b.bn,'bn'));
+  sel.innerHTML='<option value="">সব জেলা</option>'+list.map(d=>`<option value="${d.id}">${d.bn}</option>`).join('');
+}
+function fillUpazilaSelect(sel,districtId){
+  if(!districtId){sel.innerHTML='<option value="">আগে জেলা নির্বাচন করুন</option>';sel.disabled=true;return;}
+  const d=getDistrict(districtId);
+  sel.disabled=false;
+  sel.innerHTML='<option value="">সব উপজেলা</option>'+d.u.map(u=>`<option value="${u}">${u}</option>`).join('');
+}
+
+const divisionFilter=document.getElementById('divisionFilter');
+const districtFilter=document.getElementById('districtFilter');
+const upazilaFilter=document.getElementById('upazilaFilter');
+fillDivisionSelect(divisionFilter);
+fillDistrictSelect(districtFilter,'');
+upazilaFilter.disabled=true;
+upazilaFilter.innerHTML='<option value="">আগে জেলা নির্বাচন করুন</option>';
+
+divisionFilter.addEventListener('change',()=>{
+  fillDistrictSelect(districtFilter,divisionFilter.value);
+  upazilaFilter.disabled=true; upazilaFilter.innerHTML='<option value="">আগে জেলা নির্বাচন করুন</option>';
+  resetPaging(); renderList();
+  toggleLoadDistrictBtn();
+});
+districtFilter.addEventListener('change',()=>{
+  fillUpazilaSelect(upazilaFilter,districtFilter.value);
+  resetPaging(); renderList();
+  toggleLoadDistrictBtn();
+});
+upazilaFilter.addEventListener('change',()=>{
+  if(districtFilter.value && upazilaFilter.value){
+    countSearch();
+    const changed=ensureUpazilaDonors(districtFilter.value,upazilaFilter.value);
+    if(changed){saveDonors();saveGen();renderDashboard();}
+  }
+  resetPaging(); renderList();
+});
+function toggleLoadDistrictBtn(){
+  const btn=document.getElementById('loadDistrictBtn');
+  btn.classList.toggle('hidden',!districtFilter.value);
+}
+document.getElementById('loadDistrictBtn').addEventListener('click',()=>{
+  if(!districtFilter.value) return;
+  ensureDistrictDonors(districtFilter.value);
+  renderDashboard();
+  resetPaging(); renderList();
+  toast('জেলার সব উপজেলার ডোনার লোড হয়েছে ✅');
+});
+
+/* ============ BLOOD GROUP CHIPS ============ */
+let activeBloodGroup='';
+function renderBgChips(){
+  const c=document.getElementById('bgSelect');
+  let html=`<button type="button" class="bg-chip ${activeBloodGroup===''?'active':''}" data-bg="">সব</button>`;
+  BLOOD_GROUPS.forEach(bg=>{html+=`<button type="button" class="bg-chip ${activeBloodGroup===bg?'active':''}" data-bg="${bg}">${BG_BN[bg]}</button>`;});
+  c.innerHTML=html;
+  c.querySelectorAll('.bg-chip').forEach(b=>b.addEventListener('click',()=>{activeBloodGroup=b.dataset.bg;if(activeBloodGroup)countSearch();renderBgChips();resetPaging();renderList();}));
+}
+
+/* ============ DISTANCE / NEARBY ============ */
+let userCoords=null;
+function haversine(lat1,lng1,lat2,lng2){
+  const R=6371,dLat=(lat2-lat1)*Math.PI/180,dLng=(lng2-lng1)*Math.PI/180;
+  const a=Math.sin(dLat/2)**2+Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLng/2)**2;
+  return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
+}
+document.getElementById('nearbyBtn').addEventListener('click',()=>{
+  if(!navigator.geolocation){toast('আপনার ব্রাউজার লোকেশন সাপোর্ট করে না');return;}
+  toast('অবস্থান নির্ণয় করা হচ্ছে...');
+  navigator.geolocation.getCurrentPosition(pos=>{
+    userCoords={lat:pos.coords.latitude,lng:pos.coords.longitude};
+    toast('কাছের ডোনার অনুযায়ী সাজানো হয়েছে 📍');
+    resetPaging();renderList();
+  },()=>{toast('লোকেশন পাওয়া যায়নি, অনুমতি দিন');});
+});
+
+/* ============ LIST RENDER + PAGINATION ============ */
+const PAGE_SIZE=30;
+let currentPage=1;
+function resetPaging(){currentPage=1;}
+function escapeHtml(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+
+function getFiltered(){
+  const q=toEn(document.getElementById('searchInput').value.trim()).toLowerCase();
+  let list=donors.filter(x=>{
+    if(districtFilter.value && String(x.did)!==String(districtFilter.value)) return false;
+    if(upazilaFilter.value && x.u!==upazilaFilter.value) return false;
+    if(divisionFilter.value){const d=getDistrict(x.did); if(!d||String(d.div)!==String(divisionFilter.value)) return false;}
+    if(activeBloodGroup && x.g!==activeBloodGroup) return false;
+    if(document.getElementById('readyOnly').checked && !isReady(x)) return false;
+    if(q){
+      const d=getDistrict(x.did);
+      const hay=(x.n+' '+x.p+' '+bn(x.p)+' '+x.u+' '+(d?d.bn:'')+' '+(x.a||'')).toLowerCase();
+      if(!hay.includes(q)) return false;
+    }
+    return true;
+  });
+  if(userCoords){
+    list=list.slice().sort((a,b)=>haversine(userCoords.lat,userCoords.lng,a.t,a.o)-haversine(userCoords.lat,userCoords.lng,b.t,b.o));
+  }
+  return list;
+}
+
+function cardHtml(x){
+  const d=getDistrict(x.did);
+  const bgColor=BG_COLORS[x.g]||'#C81E3A';
+  const waPhone='880'+x.p.slice(1);
+  const mapQuery=encodeURIComponent(x.u+', '+(d?d.n:''));
+  const mapUrl=`https://www.google.com/maps/search/?api=1&query=${x.t},${x.o}(${mapQuery})`;
+  let distTag='';
+  if(userCoords){const dist=haversine(userCoords.lat,userCoords.lng,x.t,x.o);distTag=`<span class="muted">· ~${bn(dist.toFixed(1))} কিমি</span>`;}
+  return `<div class="card" data-id="${x.id}">
+    <div class="card-manage">
+      <button class="manage-btn edit-btn" title="এডিট">✏️</button>
+      <button class="manage-btn del-btn" title="ডিলিট">🗑️</button>
+    </div>
+    <div class="card-top">
+      <div class="name-block">
+        <h3>${escapeHtml(x.n)}</h3>
+        <div class="loc">📍 ${escapeHtml(x.u)}, ${d?escapeHtml(d.bn):''} ${distTag}</div>
+      </div>
+      <div class="badge" style="background:${bgColor}">${BG_BN[x.g]||x.g}</div>
+    </div>
+    <div class="info-row">📞 <span>${bn(x.p)}</span></div>
+    ${readyHtml(x)}
+    ${x.a?`<div class="info-row muted">🏠 ${escapeHtml(x.a)}</div>`:''}
+    <div class="card-actions">
+      <a class="icon-btn call" href="tel:${x.p}">📞 কল</a>
+      <a class="icon-btn sms" href="sms:${x.p}">✉️ এসএমএস</a>
+      <a class="icon-btn wa" href="https://wa.me/${waPhone}" target="_blank" rel="noopener">🟢 হোয়াটসঅ্যাপ</a>
+      <a class="icon-btn map" href="${mapUrl}" target="_blank" rel="noopener">🗺️ ম্যাপ</a>
+    </div>
+  </div>`;
+}
+
+function renderList(){
+  const grid=document.getElementById('donorGrid');
+  const empty=document.getElementById('emptyState');
+  const loadMoreWrap=document.getElementById('loadMoreWrap');
+  const list=getFiltered();
+  document.getElementById('resultCount').textContent=list.length?`${bn(list.length)} জন ডোনার পাওয়া গেছে`:'';
+  if(list.length===0){
+    grid.innerHTML='';
+    empty.classList.remove('hidden');
+    loadMoreWrap.classList.add('hidden');
+    return;
+  }
+  empty.classList.add('hidden');
+  const shown=list.slice(0,currentPage*PAGE_SIZE);
+  grid.innerHTML=shown.map(cardHtml).join('');
+  loadMoreWrap.classList.toggle('hidden',shown.length>=list.length);
+  grid.querySelectorAll('.edit-btn').forEach(b=>b.addEventListener('click',e=>openEditModal(e.target.closest('.card').dataset.id)));
+  grid.querySelectorAll('.del-btn').forEach(b=>b.addEventListener('click',e=>confirmDeleteDonor(e.target.closest('.card').dataset.id)));
+}
+document.getElementById('loadMoreBtn').addEventListener('click',()=>{currentPage++;renderList();});
+var srchT;
+document.getElementById('searchInput').addEventListener('input',()=>{resetPaging();renderList();clearTimeout(srchT);srchT=setTimeout(()=>{if(document.getElementById('searchInput').value.trim().length>=2)countSearch();},900);});
+document.getElementById('readyOnly').addEventListener('change',()=>{resetPaging();renderList();});
+
+/* ============ ADD/EDIT DONOR MODAL ============ */
+const donorOverlay=document.getElementById('donorModalOverlay');
+function fillFormDistrict(sel){
+  const list=BD_DATA.districts.slice().sort((a,b)=>a.bn.localeCompare(b.bn,'bn'));
+  sel.innerHTML=list.map(d=>`<option value="${d.id}">${d.bn}</option>`).join('');
+}
+function fillFormUpazila(sel,districtId){
+  const d=getDistrict(districtId);
+  sel.innerHTML=d?d.u.map(u=>`<option value="${u}">${u}</option>`).join(''):'';
+}
+const fDistrict=document.getElementById('fDistrict');
+const fUpazila=document.getElementById('fUpazila');
+fillFormDistrict(fDistrict);
+fillFormUpazila(fUpazila,fDistrict.value);
+fDistrict.addEventListener('change',()=>fillFormUpazila(fUpazila,fDistrict.value));
+
+function openAddModal(){
+  document.getElementById('modalTitle').textContent='নতুন ডোনার যোগ করুন';
+  document.getElementById('donorForm').reset();
+  document.getElementById('donorId').value='';
+  fillFormDistrict(fDistrict);
+  if(districtFilter.value) fDistrict.value=districtFilter.value;
+  fillFormUpazila(fUpazila,fDistrict.value);
+  if(upazilaFilter.value) fUpazila.value=upazilaFilter.value;
+  donorOverlay.classList.add('open');
+}
+function openEditModal(id){
+  const x=donors.find(d=>d.id===id); if(!x) return;
+  document.getElementById('modalTitle').textContent='ডোনার তথ্য এডিট করুন';
+  document.getElementById('donorId').value=x.id;
+  document.getElementById('fName').value=x.n;
+  document.getElementById('fBloodGroup').value=x.g;
+  document.getElementById('fPhone').value=x.p;
+  fillFormDistrict(fDistrict); fDistrict.value=x.did;
+  fillFormUpazila(fUpazila,x.did); fUpazila.value=x.u;
+  document.getElementById('fAddress').value=x.a||'';
+  donorOverlay.classList.add('open');
+}
+function closeDonorModal(){donorOverlay.classList.remove('open');}
+document.getElementById('addDonorBtn').addEventListener('click',openAddModal);
+document.getElementById('closeModal').addEventListener('click',closeDonorModal);
+document.getElementById('cancelModal').addEventListener('click',closeDonorModal);
+donorOverlay.addEventListener('click',e=>{if(e.target===donorOverlay)closeDonorModal();});
+
+document.getElementById('donorForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const id=document.getElementById('donorId').value;
+  const n=document.getElementById('fName').value.trim();
+  const g=document.getElementById('fBloodGroup').value;
+  const p=toEn(document.getElementById('fPhone').value.trim());
+  const did=Number(fDistrict.value);
+  const u=fUpazila.value;
+  const a=document.getElementById('fAddress').value.trim();
+  const d=getDistrict(did);
+  if(id){
+    const x=donors.find(d2=>d2.id===id);
+    if(x){x.n=n;x.g=g;x.p=p;x.did=did;x.u=u;x.a=a;x.m=1;}
+    toast('ডোনার তথ্য আপডেট হয়েছে ✅');
+  } else {
+    donors.unshift({id:'c_'+Date.now().toString(36)+Math.random().toString(36).slice(2,6),n,g,p,did,u,a,t:d?jitter(Math.random,d.lat):23.8,o:d?jitter(Math.random,d.lon):90.4});
+    toast('নতুন ডোনার যোগ করা হয়েছে ✅');
+  }
+  saveDonors();
+  closeDonorModal();
+  renderDashboard(); renderList();
+});
+
+/* ============ CONFIRM MODAL ============ */
+const confirmOverlay=document.getElementById('confirmOverlay');
+let confirmAction=null;
+function askConfirm(title,msg,onOk){
+  document.getElementById('confirmTitle').textContent=title;
+  document.getElementById('confirmMsg').textContent=msg;
+  confirmAction=onOk;
+  confirmOverlay.classList.add('open');
+}
+document.getElementById('confirmCancel').addEventListener('click',()=>{confirmOverlay.classList.remove('open');confirmAction=null;});
+document.getElementById('confirmOk').addEventListener('click',()=>{if(confirmAction)confirmAction();confirmOverlay.classList.remove('open');confirmAction=null;});
+confirmOverlay.addEventListener('click',e=>{if(e.target===confirmOverlay){confirmOverlay.classList.remove('open');confirmAction=null;}});
+
+function confirmDeleteDonor(id){
+  const x=donors.find(d=>d.id===id); if(!x) return;
+  askConfirm('ডোনার ডিলিট করুন',`আপনি কি নিশ্চিত "${x.n}" কে ডিলিট করতে চান?`,()=>{
+    donors=donors.filter(d=>d.id!==id); deletedIds.add(id);
+    saveDonors(); renderDashboard(); renderList();
+    toast('ডোনার ডিলিট হয়েছে 🗑️');
+  });
+}
+
+/* ============ TOAST ============ */
+let toastTimer;
+function toast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>t.classList.remove('show'),2200);
+}
+
+/* ============ EXPORT / IMPORT ============ */
+document.getElementById('exportBtn').addEventListener('click',()=>{
+  const blob=new Blob([JSON.stringify({donors,ambulances},null,2)],{type:'application/json'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a'); a.href=url; a.download='raktoshetu_backup.json';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url);
+  toast('ব্যাকআপ ডাউনলোড হয়েছে ⬇️');
+});
+document.getElementById('importBtn').addEventListener('click',()=>document.getElementById('importFile').click());
+document.getElementById('importFile').addEventListener('change',e=>{
+  const file=e.target.files[0]; if(!file) return;
+  const reader=new FileReader();
+  reader.onload=ev=>{
+    try{
+      const data=JSON.parse(ev.target.result);
+      const newDonors=Array.isArray(data)?data:(data.donors||[]);
+      const newAmb=Array.isArray(data)?[]:(data.ambulances||[]);
+      askConfirm('ডেটা ইম্পোর্ট করুন',`${bn(newDonors.length)} জন ডোনার ইম্পোর্ট করা হবে, বর্তমান ডেটা প্রতিস্থাপিত হবে। এগিয়ে যাবেন?`,()=>{
+        donors=newDonors.map(x=>({...x,m:1})); if(newAmb.length) ambulances=newAmb;
+        generatedSet=new Set(donors.map(x=>genKey(x.did,x.u)));
+        deletedIds=new Set(); const have=new Set(donors.map(x=>x.id));
+        generatedSet.forEach(k=>{const [a,b]=splitKey(k);genList(Number(a),b).forEach(g=>{if(!have.has(g.id))deletedIds.add(g.id);});});
+        saveDonors(); saveGen(); saveAmb();
+        renderDashboard(); renderList();
+        toast('ডেটা ইম্পোর্ট সম্পন্ন হয়েছে ✅');
+      });
+    }catch(err){toast('ফাইলটি সঠিক নয় ❌');}
+    e.target.value='';
+  };
+  reader.readAsText(file);
+});
+document.getElementById('resetBtn').addEventListener('click',()=>{
+  askConfirm('রিসেট করুন','বর্তমান সব ডেটা মুছে প্রাথমিক নমুনা ডেটা দিয়ে শুরু হবে। এগিয়ে যাবেন?',()=>{
+    donors=[]; generatedSet=new Set(); deletedIds=new Set();
+    seedStarterData();
+    userCoords=null;
+    renderDashboard(); resetPaging(); renderList();
+    toast('রিসেট সম্পন্ন হয়েছে ↺');
+  });
+});
+
+/* ============ AMBULANCE VIEW ============ */
+function renderNationalAmb(){
+  document.getElementById('nationalAmb').innerHTML=NATIONAL_AMB.map(a=>`
+    <div class="amb-card">
+      <div class="nm">${a.name}</div>
+      <div class="num">${a.phone}</div>
+      <div class="sub">${a.sub}</div>
+      <a class="btn btn-primary btn-sm btn-block" href="tel:${a.phone}">📞 কল করুন</a>
+    </div>`).join('');
+}
+const ambDistrictFilter=document.getElementById('ambDistrictFilter');
+fillDistrictSelect(ambDistrictFilter,'');
+ambDistrictFilter.addEventListener('change',renderAmbList);
+document.getElementById('ambSearchInput').addEventListener('input',renderAmbList);
+
+function renderAmbList(){
+  const q=document.getElementById('ambSearchInput').value.trim().toLowerCase();
+  let list=ambulances.filter(a=>{
+    if(ambDistrictFilter.value && String(a.did)!==String(ambDistrictFilter.value)) return false;
+    if(q){const d=getDistrict(a.did);const hay=(a.n+' '+(d?d.bn:'')+' '+a.t).toLowerCase();if(!hay.includes(q))return false;}
+    return true;
+  });
+  document.getElementById('ambResultCount').textContent=list.length?`${bn(list.length)}টি সেবা পাওয়া গেছে`:'';
+  const grid=document.getElementById('ambGrid');
+  if(list.length===0){grid.innerHTML='<div class="notice">কোনো সেবা পাওয়া যায়নি।</div>';return;}
+  grid.innerHTML=list.map(a=>{
+    const d=getDistrict(a.did);
+    const waPhone='880'+a.p.slice(1);
+    return `<div class="card" data-id="${a.id}">
+      <div class="card-manage admin-only hidden">
+        <button class="manage-btn amb-edit-btn" title="এডিট">✏️</button>
+        <button class="manage-btn amb-del-btn" title="ডিলিট">🗑️</button>
+      </div>
+      <div class="card-top">
+        <div class="name-block">
+          <h3>${escapeHtml(a.n)}</h3>
+          <div class="loc">📍 ${d?escapeHtml(d.bn):''} · <span class="tag">${a.t}</span></div>
+        </div>
+      </div>
+      <div class="info-row">📞 <span>${bn(a.p)}</span></div>
+      <div class="card-actions">
+        <a class="icon-btn call" href="tel:${a.p}">📞 কল</a>
+        <a class="icon-btn wa" href="https://wa.me/${waPhone}" target="_blank" rel="noopener">🟢 হোয়াটসঅ্যাপ</a>
+      </div>
+    </div>`;
+  }).join('');
+  if(isAdmin){
+    grid.querySelectorAll('.admin-only').forEach(el=>el.classList.remove('hidden'));
+    grid.querySelectorAll('.amb-edit-btn').forEach(b=>b.addEventListener('click',e=>openEditAmbModal(e.target.closest('.card').dataset.id)));
+    grid.querySelectorAll('.amb-del-btn').forEach(b=>b.addEventListener('click',e=>confirmDeleteAmb(e.target.closest('.card').dataset.id)));
+  }
+}
+
+/* ============ AMBULANCE MODAL (admin) ============ */
+const ambOverlay=document.getElementById('ambModalOverlay');
+const aDistrict=document.getElementById('aDistrict');
+fillFormDistrict(aDistrict);
+function openAddAmbModal(){
+  document.getElementById('ambModalTitle').textContent='নতুন অ্যাম্বুলেন্স সেবা যোগ করুন';
+  document.getElementById('ambForm').reset();
+  document.getElementById('ambId').value='';
+  fillFormDistrict(aDistrict);
+  ambOverlay.classList.add('open');
+}
+function openEditAmbModal(id){
+  const a=ambulances.find(x=>x.id===id); if(!a) return;
+  document.getElementById('ambModalTitle').textContent='অ্যাম্বুলেন্স সেবা এডিট করুন';
+  document.getElementById('ambId').value=a.id;
+  document.getElementById('aName').value=a.n;
+  document.getElementById('aType').value=a.t;
+  fillFormDistrict(aDistrict); aDistrict.value=a.did;
+  document.getElementById('aPhone').value=a.p;
+  ambOverlay.classList.add('open');
+}
+function closeAmbModal(){ambOverlay.classList.remove('open');}
+document.getElementById('closeAmbModal').addEventListener('click',closeAmbModal);
+document.getElementById('cancelAmbModal').addEventListener('click',closeAmbModal);
+ambOverlay.addEventListener('click',e=>{if(e.target===ambOverlay)closeAmbModal();});
+document.getElementById('ambForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const id=document.getElementById('ambId').value;
+  const n=document.getElementById('aName').value.trim();
+  const t=document.getElementById('aType').value;
+  const did=aDistrict.value;
+  const p=toEn(document.getElementById('aPhone').value.trim());
+  if(id){
+    const a=ambulances.find(x=>x.id===id);
+    if(a){a.n=n;a.t=t;a.did=did;a.p=p;}
+    toast('তথ্য আপডেট হয়েছে ✅');
+  }else{
+    ambulances.unshift({id:'amb_c_'+Date.now().toString(36),n,t,did,p});
+    toast('নতুন সেবা যোগ করা হয়েছে ✅');
+  }
+  saveAmb(); closeAmbModal(); renderAmbList(); renderDashboard();
+});
+function confirmDeleteAmb(id){
+  const a=ambulances.find(x=>x.id===id); if(!a) return;
+  askConfirm('সেবা ডিলিট করুন',`"${a.n}" ডিলিট করতে চান?`,()=>{
+    ambulances=ambulances.filter(x=>x.id!==id);
+    saveAmb(); renderAmbList(); renderDashboard();
+    toast('ডিলিট হয়েছে 🗑️');
+  });
+}
+
+/* ============ ADMIN ============ */
+let isAdmin=false;
+function getCred(){const c=ls(K_ADMIN,null);return (c&&c.e&&c.p)?c:{e:'admin@gmail.com',p:'admin123'};}
+document.getElementById('adminBtn').addEventListener('click',()=>{
+  if(isAdmin){openAdminPanel();}else{document.getElementById('adminLoginOverlay').classList.add('open');}
+});
+document.getElementById('closeAdminLogin').addEventListener('click',()=>document.getElementById('adminLoginOverlay').classList.remove('open'));
+document.getElementById('cancelAdminLogin').addEventListener('click',()=>document.getElementById('adminLoginOverlay').classList.remove('open'));
+document.getElementById('adminLoginForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const em=document.getElementById('adminEmailInput').value.trim().toLowerCase();
+  const val=document.getElementById('adminPassInput').value;
+  const cred=getCred();
+  if(em===cred.e.toLowerCase() && val===cred.p){
+    document.getElementById('adminEmailInput').value='';
+    isAdmin=true; sessionStorage.setItem('rs_admin_session','1');
+    document.getElementById('adminLoginOverlay').classList.remove('open');
+    document.getElementById('adminPassInput').value='';
+    toast('অ্যাডমিন হিসেবে লগইন হয়েছে ✅');
+    openAdminPanel();
+    renderAmbList(); renderReqList();
+  }else{
+    toast('জিমেইল বা পাসওয়ার্ড ভুল ❌');
+  }
+});
+if(sessionStorage.getItem('rs_admin_session')==='1'){isAdmin=true;}
+
+function openAdminPanel(){
+  renderAdminStats(); renderUsage(); renderProfile(); renderBgStats();
+  document.getElementById('adminPanelOverlay').classList.add('open');
+}
+document.getElementById('closeAdminPanel').addEventListener('click',()=>document.getElementById('adminPanelOverlay').classList.remove('open'));
+function renderAdminStats(){
+  const el=document.getElementById('adminStats');
+  el.innerHTML=`
+    <div class="box"><div class="n">${bn(donors.length)}</div><div class="l">মোট ডোনার</div></div>
+    <div class="box"><div class="n">${bn(generatedSet.size)}/${bn(TOTAL_UPZ)}</div><div class="l">উপজেলা লোড</div></div>
+    <div class="box"><div class="n">${bn(new Set(donors.map(x=>x.did)).size)}/${bn(64)}</div><div class="l">জেলা কভার</div></div>
+    <div class="box"><div class="n">${bn(ambulances.length)}</div><div class="l">অ্যাম্বুলেন্স</div></div>
+    <div class="box"><div class="n">${bn(getReqs().length)}</div><div class="l">রক্তের অনুরোধ</div></div>`;
+}
+document.getElementById('adminLogoutBtn').addEventListener('click',()=>{
+  isAdmin=false; sessionStorage.removeItem('rs_admin_session');
+  document.getElementById('adminPanelOverlay').classList.remove('open');
+  renderAmbList(); renderReqList();
+  toast('লগ-আউট হয়েছে');
+});
+document.getElementById('changeAdminPassBtn').addEventListener('click',()=>{
+  const em=document.getElementById('newAdminEmail').value.trim().toLowerCase();
+  const pw=document.getElementById('newAdminPass').value.trim();
+  if(!em&&!pw){toast('নতুন জিমেইল বা পাসওয়ার্ড লিখুন');return;}
+  if(em&&!/^[a-z0-9._%+-]+@gmail\.com$/.test(em)){toast('সঠিক জিমেইল দিন (যেমন: name@gmail.com)');return;}
+  if(pw&&pw.length<6){toast('কমপক্ষে ৬ অক্ষরের পাসওয়ার্ড দিন');return;}
+  const cur=getCred();
+  localStorage.setItem(K_ADMIN,JSON.stringify({e:em||cur.e,p:pw||cur.p}));
+  document.getElementById('newAdminEmail').value=''; document.getElementById('newAdminPass').value='';
+  toast('অ্যাডমিন তথ্য পরিবর্তন হয়েছে ✅');
+});
+document.getElementById('manageAmbBtn').addEventListener('click',()=>{
+  document.getElementById('adminPanelOverlay').classList.remove('open');
+  showTab('amb'); renderAmbList();
+  openAddAmbModal();
+});
+document.getElementById('wipeAllBtn').addEventListener('click',()=>{
+  askConfirm('পুরো ডাটাবেজ মুছুন','সব ডোনার, উপজেলা-লোড তথ্য ও অ্যাম্বুলেন্স তালিকা স্থায়ীভাবে মুছে যাবে। এগিয়ে যাবেন?',()=>{
+    donors=[]; generatedSet=new Set(); ambulances=[]; deletedIds=new Set();
+    saveDonors(); saveGen(); saveAmb();
+    seedStarterData(); seedAmbulances();
+    renderDashboard(); renderAdminStats(); resetPaging(); renderList();
+    toast('ডাটাবেজ রিসেট হয়েছে ↺');
+  });
+});
+
+/* bulk generate ALL upazilas, chunked to avoid freezing UI */
+document.getElementById('genAllBtn').addEventListener('click',()=>{
+  const allKeys=[];
+  BD_DATA.districts.forEach(d=>d.u.forEach(u=>{if(!generatedSet.has(genKey(d.id,u))) allKeys.push([d.id,u]);}));
+  if(allKeys.length===0){toast('সব উপজেলা ইতিমধ্যে লোড হয়ে গেছে ✅');return;}
+  const wrap=document.getElementById('genProgressWrap');
+  const bar=document.getElementById('genProgressBar');
+  const label=document.getElementById('genProgressLabel');
+  wrap.classList.remove('hidden');
+  let i=0; const total=allKeys.length; const batchSize=15;
+  function step(){
+    const end=Math.min(i+batchSize,total);
+    for(;i<end;i++){ensureUpazilaDonors(allKeys[i][0],allKeys[i][1]);}
+    const pct=Math.round((i/total)*100);
+    bar.style.width=pct+'%';
+    label.textContent=`তৈরি হচ্ছে... (${bn(i)}/${bn(total)} উপজেলা)`;
+    if(i<total){
+      setTimeout(step,10);
+    }else{
+      saveDonors(); saveGen();
+      renderDashboard(); renderAdminStats(); resetPaging(); renderList();
+      label.textContent=`সম্পন্ন! মোট ${bn(donors.length)} জন ডোনার তৈরি হয়েছে।`;
+      toast('সম্পূর্ণ ডাটাবেজ জেনারেট হয়েছে ✅');
+      setTimeout(()=>wrap.classList.add('hidden'),2500);
+    }
+  }
+  step();
+});
+
+/* ============ DONOR READINESS ============ */
+const BASE_DAY=Date.UTC(2026,0,1);
+function daysSince(x){return Math.floor((Date.now()-(BASE_DAY+x.ld*864e5))/864e5);}
+function isReady(x){return x.ld==null||daysSince(x)>=90;}
+function readyHtml(x){
+  if(x.ld==null) return '';
+  const ds=daysSince(x);
+  const dt=new Date(BASE_DAY+x.ld*864e5).toLocaleDateString('bn-BD',{year:'numeric',month:'short',day:'numeric',timeZone:'UTC'});
+  return ds>=90
+    ?`<div class="info-row" style="color:#2E7D32;font-weight:600;">✅ রক্ত দিতে প্রস্তুত <span class="muted" style="font-weight:400;">· শেষ দান: ${dt}</span></div>`
+    :`<div class="info-row" style="color:var(--gold-600);font-weight:600;">⏳ আরও ${bn(90-ds)} দিন পর <span class="muted" style="font-weight:400;">· শেষ দান: ${dt}</span></div>`;
+}
+
+/* ============ ADMIN PROFILE ============ */
+const K_PROF='rs_admin_profile_v1', K_REQ='rs_requests_v1';
+function getProf(){const p=ls(K_PROF,null);return p||{name:'অ্যাডমিন',bg:'O+',donations:[],searches:0,reqs:0};}
+function saveProf(p){try{localStorage.setItem(K_PROF,JSON.stringify(p));}catch(e){}}
+function countSearch(){if(!isAdmin) return; const p=getProf(); p.searches=(p.searches||0)+1; saveProf(p);}
+function renderProfile(){
+  const el=document.getElementById('adminProfile'); if(!el) return;
+  const p=getProf(), c=getCred(), n=p.donations.length;
+  const last=n?new Date(p.donations[n-1]):null;
+  const next=last?new Date(last.getTime()+90*864e5):null;
+  const fd=d=>d.toLocaleDateString('bn-BD',{year:'numeric',month:'long',day:'numeric'});
+  const can=!next||next<=new Date();
+  el.innerHTML=`<div class="prof">
+    <div class="prof-top">
+      <div class="avatar">${escapeHtml((p.name||'অ').trim().charAt(0)||'অ')}</div>
+      <div style="flex:1;min-width:0;"><input type="text" id="pfName" value="${escapeHtml(p.name||'')}" placeholder="আপনার নাম"><div style="font-size:12px;color:var(--muted);margin-top:3px;">${escapeHtml(c.e)}</div></div>
+      <select id="pfBg" style="width:84px;">${BLOOD_GROUPS.map(b=>`<option ${b===p.bg?'selected':''}>${b}</option>`).join('')}</select>
+    </div>
+    <div class="admin-stats">
+      <div class="box"><div class="n">${bn(n)} বার</div><div class="l">রক্ত দিয়েছেন</div></div>
+      <div class="box"><div class="n">${bn(p.searches||0)} বার</div><div class="l">রক্ত অনুসন্ধান করেছেন</div></div>
+      <div class="box"><div class="n">${bn(p.reqs||0)} বার</div><div class="l">অনুরোধ পাঠিয়েছেন</div></div>
+    </div>
+    <div style="font-size:13px;font-weight:600;color:${can?'#2E7D32':'var(--gold-600)'};">${can?'✅ আপনি এখন রক্ত দিতে পারবেন':'⏳ আবার রক্ত দিতে পারবেন: '+fd(next)}</div>
+    ${n?`<div class="prof-hist">সর্বশেষ রক্তদান: ${fd(last)}${n>1?' · আগের দান: '+p.donations.slice(-4,-1).reverse().map(d=>fd(new Date(d))).join(', '):''}</div>`:''}
+    <div class="toolbar-row" style="margin-top:10px;"><div class="left">
+      <button class="btn btn-primary btn-sm" id="pfAddDon">🩸 আজ রক্ত দিয়েছি</button>
+      <button class="btn btn-ghost btn-sm" id="pfUndoDon">↩ শেষ দান বাতিল</button>
+    </div></div>
+  </div>`;
+  document.getElementById('pfName').addEventListener('change',e=>{const q=getProf();q.name=e.target.value.trim()||'অ্যাডমিন';saveProf(q);renderProfile();});
+  document.getElementById('pfBg').addEventListener('change',e=>{const q=getProf();q.bg=e.target.value;saveProf(q);});
+  document.getElementById('pfAddDon').addEventListener('click',()=>{const q=getProf();q.donations.push(new Date().toISOString());saveProf(q);renderProfile();toast('রক্তদান যোগ হয়েছে 🩸');});
+  document.getElementById('pfUndoDon').addEventListener('click',()=>{const q=getProf();if(!q.donations.length){toast('বাতিল করার মতো দান নেই');return;}q.donations.pop();saveProf(q);renderProfile();});
+}
+function renderBgStats(){
+  const el=document.getElementById('bgStats'); if(!el) return;
+  const c={}; BLOOD_GROUPS.forEach(b=>c[b]=0); donors.forEach(x=>{if(c[x.g]!=null)c[x.g]++;});
+  const mx=Math.max(1,...Object.values(c));
+  el.innerHTML=BLOOD_GROUPS.map(b=>`<div class="bar-row"><span class="bar-l">${b}</span><div class="bar-t"><div class="bar-f" style="width:${(c[b]/mx*100).toFixed(1)}%;background:${BG_COLORS[b]}"></div></div><span class="bar-n">${bn(c[b])}</span></div>`).join('');
+}
+
+/* ============ BLOOD REQUESTS ============ */
+const URG={now:'এখনই জরুরি',today:'আজকের মধ্যে',soon:'২-৩ দিনের মধ্যে'};
+function getReqs(){return ls(K_REQ,[]);}
+function saveReqs(l){try{localStorage.setItem(K_REQ,JSON.stringify(l));}catch(e){toast('⚠️ সেভ করা যায়নি');}}
+function reqMessage(r){
+  const d=getDistrict(r.did);
+  return `🆘 জরুরি রক্ত প্রয়োজন!\nরোগী: ${r.pt}\nরক্তের গ্রুপ: ${r.g} (${bn(r.b)} ব্যাগ)\nহাসপাতাল: ${r.h}\nএলাকা: ${r.u}, ${d?d.bn:''}\nসময়: ${URG[r.urg]||''}\nযোগাযোগ: ${r.p}${r.note?'\nতথ্য: '+r.note:''}\n— রক্তসেতু`;
+}
+function renderReqList(){
+  const list=getReqs().slice().sort((a,b)=>b.ts-a.ts);
+  document.getElementById('reqCount').textContent=list.length?`${bn(list.length)}টি অনুরোধ`:'';
+  const grid=document.getElementById('reqGrid');
+  if(!list.length){grid.innerHTML='<div class="notice">এখনো কোনো রক্তের অনুরোধ নেই। <b>নতুন অনুরোধ পাঠান</b> বাটনে চাপুন।</div>';return;}
+  grid.innerHTML=list.map(r=>{
+    const d=getDistrict(r.did);
+    return `<div class="card" data-id="${r.id}" style="${r.done?'opacity:.65;':''}">
+      <div class="card-top">
+        <div class="name-block"><h3>${escapeHtml(r.pt)}</h3><div class="loc">📍 ${escapeHtml(r.u)}, ${d?escapeHtml(d.bn):''}</div></div>
+        <div class="badge" style="background:${BG_COLORS[r.g]||'#C81E3A'}">${r.g}</div>
+      </div>
+      <div class="info-row">🏥 <span>${escapeHtml(r.h)}</span></div>
+      <div class="info-row">🩸 <span>${bn(r.b)} ব্যাগ</span> <span class="tag">${URG[r.urg]||''}</span> ${r.done?'<span class="tag">✔ সম্পন্ন</span>':''}</div>
+      <div class="info-row">📞 <span>${bn(r.p)}</span></div>
+      ${r.note?`<div class="info-row muted">📝 ${escapeHtml(r.note)}</div>`:''}
+      <div class="info-row muted" style="font-size:12px;">🕒 ${new Date(r.ts).toLocaleString('bn-BD')}</div>
+      <div class="card-actions">
+        <a class="icon-btn call" href="tel:${r.p}">📞 কল</a>
+        <button type="button" class="icon-btn sms" data-act="notify">🔔 ডোনারদের জানান</button>
+        <button type="button" class="icon-btn map" data-act="copy">📋 কপি</button>
+      </div>
+      ${isAdmin?`<div class="card-actions"><button type="button" class="btn btn-ghost btn-sm" data-act="done">${r.done?'↩ আবার চালু করুন':'✔ সম্পন্ন চিহ্নিত করুন'}</button><button type="button" class="btn btn-danger btn-sm" data-act="del">🗑️ ডিলিট</button></div>`:''}
+    </div>`;
+  }).join('');
+}
+function copyText(t){
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(()=>toast('কপি হয়েছে 📋'),()=>toast('কপি করা যায়নি'));return;}
+  const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();
+  try{document.execCommand('copy');toast('কপি হয়েছে 📋');}catch(e){toast('কপি করা যায়নি');}
+  document.body.removeChild(ta);
+}
+document.getElementById('reqGrid').addEventListener('click',e=>{
+  const b=e.target.closest('[data-act]'); if(!b) return;
+  const id=b.closest('.card').dataset.id;
+  const l=getReqs(), r=l.find(x=>x.id===id); if(!r) return;
+  const act=b.dataset.act;
+  if(act==='copy') copyText(reqMessage(r));
+  else if(act==='notify') openMatch(r);
+  else if(act==='done'&&isAdmin){r.done=!r.done;saveReqs(l);renderReqList();}
+  else if(act==='del'&&isAdmin){askConfirm('অনুরোধ ডিলিট','এই অনুরোধটি ডিলিট করতে চান?',()=>{saveReqs(l.filter(x=>x.id!==id));renderReqList();renderAdminStats();toast('ডিলিট হয়েছে 🗑️');});}
+});
+
+const reqOverlay=document.getElementById('reqModalOverlay');
+const rDistrict=document.getElementById('rDistrict'), rUpazila=document.getElementById('rUpazila');
+fillFormDistrict(rDistrict); fillFormUpazila(rUpazila,rDistrict.value);
+rDistrict.addEventListener('change',()=>fillFormUpazila(rUpazila,rDistrict.value));
+function openReqModal(){
+  document.getElementById('reqForm').reset();
+  fillFormDistrict(rDistrict);
+  if(districtFilter.value) rDistrict.value=districtFilter.value;
+  fillFormUpazila(rUpazila,rDistrict.value);
+  if(upazilaFilter.value) rUpazila.value=upazilaFilter.value;
+  if(activeBloodGroup) document.getElementById('rBlood').value=activeBloodGroup;
+  reqOverlay.classList.add('open');
+}
+function closeReqModal(){reqOverlay.classList.remove('open');}
+['quickReqBtn','newReqBtn'].forEach(i=>document.getElementById(i).addEventListener('click',openReqModal));
+document.getElementById('closeReqModal').addEventListener('click',closeReqModal);
+document.getElementById('cancelReqModal').addEventListener('click',closeReqModal);
+reqOverlay.addEventListener('click',e=>{if(e.target===reqOverlay)closeReqModal();});
+document.getElementById('tabReqBtn').addEventListener('click',()=>{showTab('req');renderReqList();});
+document.getElementById('reqForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const phone=toEn(document.getElementById('rPhone').value.trim());
+  if(!/^01\d{9}$/.test(phone)){toast('সঠিক ১১ সংখ্যার মোবাইল নম্বর দিন');return;}
+  const r={id:'r_'+Date.now().toString(36)+Math.random().toString(36).slice(2,5),
+    pt:document.getElementById('rPatient').value.trim(),g:document.getElementById('rBlood').value,
+    b:document.getElementById('rBags').value,urg:document.getElementById('rUrgency').value,
+    h:document.getElementById('rHospital').value.trim(),did:Number(rDistrict.value),u:rUpazila.value,
+    p:phone,note:document.getElementById('rNote').value.trim(),ts:Date.now(),done:false};
+  const l=getReqs(); l.unshift(r); saveReqs(l);
+  if(isAdmin){const q=getProf();q.reqs=(q.reqs||0)+1;saveProf(q);}
+  closeReqModal(); showTab('req'); renderReqList();
+  toast('রক্তের অনুরোধ তৈরি হয়েছে ✅ এবার ডোনারদের জানান');
+  openMatch(r);
+});
+
+/* notify matching donors */
+const matchOverlay=document.getElementById('matchOverlay');
+function openMatch(r){
+  ensureDistrictDonors(r.did); renderDashboard();
+  const msg=reqMessage(r), enc=encodeURIComponent(msg);
+  const dn=donors.filter(x=>x.g===r.g&&String(x.did)===String(r.did)&&isReady(x));
+  const list=dn.filter(x=>x.u===r.u).concat(dn.filter(x=>x.u!==r.u)).slice(0,30);
+  document.getElementById('matchMsg').value=msg;
+  document.getElementById('matchWa').href='https://wa.me/?text='+enc;
+  document.getElementById('matchSmsAll').href='sms:'+list.slice(0,10).map(x=>x.p).join(',')+'?body='+enc;
+  document.getElementById('matchShare').classList.toggle('hidden',!navigator.share);
+  document.getElementById('matchShare').onclick=()=>navigator.share({text:msg}).catch(()=>{});
+  document.getElementById('matchCopy').onclick=()=>copyText(msg);
+  document.getElementById('matchTitle').textContent=list.length?`${r.g} গ্রুপের প্রস্তুত ডোনার (${bn(list.length)} জন, আগে একই উপজেলার)`:'এই এলাকায় প্রস্তুত ডোনার পাওয়া যায়নি';
+  document.getElementById('matchList').innerHTML=list.map(x=>`<div class="mrow">
+    <div><div class="nm">${escapeHtml(x.n)}</div><div class="sb">📍 ${escapeHtml(x.u)} · ${bn(x.p)}</div></div>
+    <div class="acts"><a style="background:#2E7D32" href="tel:${x.p}">কল</a><a style="background:#1565C0" href="sms:${x.p}?body=${enc}">এসএমএস</a><a style="background:#25D366" target="_blank" rel="noopener" href="https://wa.me/880${x.p.slice(1)}?text=${enc}">হোয়াটসঅ্যাপ</a></div>
+  </div>`).join('');
+  matchOverlay.classList.add('open');
+}
+document.getElementById('closeMatch').addEventListener('click',()=>matchOverlay.classList.remove('open'));
+matchOverlay.addEventListener('click',e=>{if(e.target===matchOverlay)matchOverlay.classList.remove('open');});
+
+/* ============ USAGE TRACKING ============ */
+const SESSION_ID='s'+Date.now().toString(36);
+function myUid(){let id=localStorage.getItem(K_UID);if(!id){id='u'+Math.random().toString(36).slice(2,8);try{localStorage.setItem(K_UID,id);}catch(e){}}return id;}
+const UID=myUid();
+function touchUsage(sec){
+  const data=ls(K_USAGE,{users:{}}); const now=Date.now();
+  let u=data.users[UID];
+  if(!u){u=data.users[UID]={id:UID,first:now,last:now,total:0,visits:0,dev:/Mobi|Android|iPhone/i.test(navigator.userAgent)?'মোবাইল':'কম্পিউটার',sess:[]};}
+  let ss=u.sess.find(x=>x.id===SESSION_ID);
+  if(!ss){ss={id:SESSION_ID,start:now,dur:0};u.sess.push(ss);u.visits++;if(u.sess.length>30)u.sess.shift();}
+  ss.dur+=sec; u.total+=sec; u.last=now;
+  try{localStorage.setItem(K_USAGE,JSON.stringify(data));}catch(e){}
+}
+function renderUsage(){
+  const data=ls(K_USAGE,{users:{}});
+  const list=Object.values(data.users).sort((a,b)=>b.last-a.last);
+  const total=list.reduce((t,u)=>t+u.total,0);
+  const online=list.filter(u=>Date.now()-u.last<15000).length;
+  document.getElementById('usageSummary').innerHTML=
+    `<div class="box"><div class="n">${bn(list.length)}</div><div class="l">মোট ইউজার</div></div>`+
+    `<div class="box"><div class="n">${bn(online)}</div><div class="l">এখন অনলাইনে</div></div>`+
+    `<div class="box"><div class="n" style="font-size:14px;">${fmtDur(total)}</div><div class="l">মোট ব্যবহারের সময়</div></div>`+
+    `<div class="box"><div class="n" style="font-size:14px;">${fmtDur(list.length?total/list.length:0)}</div><div class="l">গড় সময় / ইউজার</div></div>`;
+  document.getElementById('usageBody').innerHTML=list.length?list.map((u,i)=>{
+    const on=Date.now()-u.last<15000;
+    return `<tr><td>ইউজার ${bn(i+1)}${u.id===UID?' (এই ডিভাইস)':''}</td><td>${u.dev}</td><td>${bn(u.visits)}</td><td>${fmtDur(u.total)}</td><td>${new Date(u.last).toLocaleString('bn-BD')}</td><td class="${on?'on':'off'}">${on?'● অনলাইন':'অফলাইন'}</td></tr>`;
+  }).join(''):'<tr><td colspan="6" class="off">এখনো কোনো তথ্য নেই</td></tr>';
+}
+document.getElementById('clearUsageBtn').addEventListener('click',()=>{
+  askConfirm('ব্যবহারের তথ্য মুছুন','সব ইউজারের ব্যবহারের সময়ের তথ্য মুছে যাবে। এগিয়ে যাবেন?',()=>{
+    try{localStorage.removeItem(K_USAGE);}catch(e){}
+    touchUsage(0); renderUsage(); toast('তথ্য মুছে ফেলা হয়েছে 🧹');
+  });
+});
+touchUsage(0);
+setInterval(()=>{
+  if(document.visibilityState==='visible') touchUsage(5);
+  if(document.getElementById('adminPanelOverlay').classList.contains('open')){renderAdminStats();renderUsage();}
+},5000);
+
+/* ============ INIT ============ */
+initTheme();
+loadAll();
+document.getElementById('brandSub').textContent=bn(64)+' জেলা · '+bn(TOTAL_UPZ)+' উপজেলা রক্তদাতা নেটওয়ার্ক';
+renderBgChips();
+renderDashboard();
+renderNationalAmb();
+renderList();
+</script>
+</body>
+</html>
